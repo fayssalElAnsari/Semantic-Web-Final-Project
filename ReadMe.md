@@ -1,14 +1,14 @@
 ## TODO
 
-- [ ] chosir un domaine (la literrature par exemple)
+- [ ] chosir un domaine (la literrature par exemple, Le choix de l'ontologie doit se baser sur la possibilite de demontrer les fonctionalites owl et skos, la quantite des donnees sur internet sur le domaine choisis. Et si c'est gratuit)
 - [ ] Cree une ontology, c'est dire les classes, sous-classes et toutes les relations entre eux, en utilisant owl, skos et rdfs
-- [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL.
-- [ ] ajouter des contraintes shacl pour valider les donnees
-- [ ] utiliser les techniques d'extraction d'information pour consruire des graphs de connaisances
-- [ ] enrichir les graphes de connaissance
+- [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL. (Est ce qu'on peut utiliser protege pour faire ca automatiquement?)
+- [ ] ajouter des contraintes SHACL pour valider les donnees 
+- [ ] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
+- [ ] enrichir le graphe de connaissance (csv2rdf)
 - [ ] relier les donnees locales avec les donnees externes
-- [ ] requettes sparql
-- [ ] sparql federee
+- [ ] requettes sparql (une requette pour chaque principe appris)
+- [ ] SPARQL federee
 - [ ] graph embeddings
 - [ ] interface pour demo
 
