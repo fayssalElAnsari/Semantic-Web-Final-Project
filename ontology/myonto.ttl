@@ -17,51 +17,39 @@
 #########################################
 myonto:Publication a owl:Class;
     owl:equivalentClass dbo:Publication;
-    rdfs:comment ""@en;
-    rdfs:label ""@en.
+    rdfs:label "Publication"@en;
+    rdfs:comment "A publication"@en.
 
 myonto:Book a owl:Class;
     owl:equivalentClass dbo:Book;
     owl:subClassOf myonto:Publication;
-    rdfs:comment ""@en;
-    rdfs:label ""@en.
+    rdfs:label "A book"@en;
+    rdfs:comment "Book"@en.
 
 myonto:Author a owl:Class;
     owl:equivalentClass dbo:Author;
-    rdfs:comment ""@en;
-    rdfs:label ""@en.
-
+    rdfs:label "An author"@en;
+    rdfs:comment "Author"@en.
+    
 myonto:PrintType a owl:Class;
     # owl:equivalentClass dbo:PrintType;
-    rdfs:comment ""@en;
-    rdfs:label ""@en.
+    rdfs:label "PrintType of a publication"@en;
+    rdfs:comment "PrintType"@en.
 
 myonto:Category a owl:Class;
     owl:equivalentClass dbo:Category;
-    rdfs:comment ""@en;
-    rdfs:label ""@en.
+    rdfs:label "A category"@en;
+    rdfs:comment "Category"@en.
 
 
 #################################################################
 #       Data Type Properties
-#################################################################
-## TODO...
-
-
-#################################################################
-#       Object Properties
 #################################################################
 myonto:name a owl:DatatypeProperty ;
     rdfs:label "Book name"@en ;
     rdfs:comment "The name of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
-
-myonto:hasPublisher a owl:DatatypeProperty ;
-    rdfs:label "Book Publisher"@en ;
-    rdfs:comment "The publisher of a book"@en ;
-    rdfs:domain myonto:Book ;
-    rdfs:range owl:Publihser .
 
 myonto:description a owl:DatatypeProperty ;
     rdfs:label "Book description"@en ;
@@ -87,19 +75,29 @@ myonto:isbn a owl:DatatypeProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
-myonto:hasPrintType a owl:DatatypeProperty ;
+
+#################################################################
+#       Object Properties
+#################################################################
+myonto:hasPublisher a owl:ObjectProperty ;
+    rdfs:label "Book Publisher"@en ;
+    rdfs:comment "The publisher of a book"@en ;
+    rdfs:domain myonto:Book ;
+    rdfs:range owl:Publihser .
+
+myonto:hasPrintType a owl:ObjectProperty ;
     rdfs:label "Print type"@en ;
     rdfs:comment "The print type of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range owl:PrintType .
 
-myonto:hasCategory a owl:DatatypeProperty ;
+myonto:hasCategory a owl:ObjectProperty ;
     rdfs:label "Book Category"@en ;
     rdfs:comment "The category of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range owl:Category .
 
-myonto:hasAuthor a owl:DatatypeProperty ;
+myonto:hasAuthor a owl:ObjectProperty ;
     rdfs:label "Book Author"@en ;
     rdfs:comment "The author of a book"@en ;
     rdfs:domain myonto:Book ;

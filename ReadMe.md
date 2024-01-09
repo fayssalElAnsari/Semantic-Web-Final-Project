@@ -15,7 +15,7 @@
         - [ ] 
 
     - [ ] owl
-        - [ ] owl:ObjectProperty
+        - [x] owl:ObjectProperty
         - [ ] owl:DatatypeProperty
         - [ ] owl:AnnotationProperty
 
@@ -43,7 +43,7 @@
         - [ ] owl:AllDisjointClasses
         - [ ] owl:disjointUnionOf
 
-        - [ ] owl:equivalentClass
+        - [x] owl:equivalentClass
         - [ ] owl:equivalentProperty
         - [ ] owl:sameAs
         - [ ] owl:differentFrom
