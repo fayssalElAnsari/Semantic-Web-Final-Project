@@ -1,0 +1,19 @@
+@prefix schema: <http://schema.org/>
+CONSTRUCT {
+    []
+        schema:name ?title;
+        schema:publisher ?publisher;
+        schema:description ?description;
+        schema:publishedDate ?publishedDate;
+        schema:language ?language;
+        schema:author ?author.
+
+} WHERE {
+    []
+        api:volumeInfo [api:title ?title];
+        api:volumeInfo [api:authors ?author];
+        #api:volumeInfo [api:description ?description];
+        api:volumeInfo [api:publishedDate ?publishedDate];
+        api:volumeInfo [api:language ?language];
+        api:volumeInfo [api:publisher ?publisher].
+}

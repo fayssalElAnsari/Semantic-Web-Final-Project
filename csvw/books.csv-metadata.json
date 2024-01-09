@@ -1,0 +1,81 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "books.csv",
+    "tableSchema": {
+        "aboutUrl": "http://example.org/book/{title}",
+        "columns": [
+            {
+                "titles": "bookID",
+                "name": "bookID",
+                "propertyUrl": "https://schema.org/identifier"
+            },
+            {
+                "titles": "title",
+                "name": "title",
+                "datatype": "string",
+                "propertyUrl": "http://schema.org/name",
+                "required": true
+            },
+            {
+                "titles": "authors",
+                "name": "authors",
+                "propertyUrl": "http://schema.org/author"
+            },
+            {
+                "titles": "average_rating",
+                "name": "average_rating",
+                "datatype": "float",
+                "propertyUrl": "https://schema.org/aggregateRating"
+            },
+            {
+                "titles": "isbn",
+                "name": "isbn",
+                "propertyUrl": "https://schema.org/isbn"
+            },
+            {
+                "titles": "isbn13",
+                "name": "isbn13",
+                "propertyUrl": "https://schema.org/isbn13"
+            },
+            {
+                "titles": "language_code",
+                "name": "language_code",
+                "propertyUrl": "https://schema.org/Language"
+            },
+            {
+                "titles": "num_pages",
+                "name": "num_pages",
+                "datatype": "int",
+                "propertyUrl": "https://schema.org/numberOfPages"
+            },
+            {
+                "titles": "ratings_count",
+                "name": "ratings_count",
+                "datatype": "int",
+                "propertyUrl": "https://schema.org/ratingCount"
+            },
+            {
+                "titles": "text_reviews_count",
+                "name": "text_reviews_count",
+                "datatype": "int",
+                "propertyUrl": "https://schema.org/reviewCount"
+            },
+            {
+                "titles": "publication_date",
+                "name": "publication_date",
+                "propertyUrl": "https://schema.org/datePublished"
+            },
+            {
+                "titles": "publisher",
+                "name": "publisher",
+                "propertyUrl": "http://schema.org/publisher"
+            },
+            {
+                "virtual": true,
+                "propertyUrl": "rdf:type",
+                "valueUrl": "http://schema.org/Book"
+            }
+        ],
+        "primaryKey" : "title"
+    }
+}

@@ -1,0 +1,16 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?localPredicate ?localObject WHERE {
+    SERVICE <http://localhost/service/googleBooks/getBookByName?name=harry%20potter> {
+        ?serviceBook schema:author ?author .
+    }
+
+    ?localBook schema:author ?author .
+    ?localBook ?localPredicate ?localObject .
+
+    #FILTER (?localPredicate != schema:author) # show or hide the name of the author
+}
+
+ORDER BY ?localPredicate
+LIMIT 100  

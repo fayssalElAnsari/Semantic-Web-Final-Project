@@ -1,0 +1,24 @@
+@prefix schema: <http://schema.org/>
+CONSTRUCT {
+    ?bookUri a schema:Book;
+        schema:name ?title;
+        schema:publisher ?publisher;
+        schema:description ?description;
+        schema:publishedDate ?publishedDate;
+        schema:language ?language;
+        schema:author ?author.
+
+} WHERE {
+    ?book
+
+        api:volumeInfo [api:title ?title];
+        api:volumeInfo [api:authors ?author];
+        #api:volumeInfo [api:description ?description];
+        api:volumeInfo [api:publishedDate ?publishedDate];
+        api:volumeInfo [api:language ?language];
+        api:id ?id;
+        api:volumeInfo [api:publisher ?publisher].
+
+    # customize
+    bind (IRI(concat("http://localhost/ld/googleBooks/book/", ?id)) AS ?bookUri )
+}

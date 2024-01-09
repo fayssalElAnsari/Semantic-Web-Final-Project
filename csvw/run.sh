@@ -1,0 +1,1 @@
+./csv2rdf -m minimal -u books.csv-metadata.json -o books.ttl 
