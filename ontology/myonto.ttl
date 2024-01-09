@@ -81,9 +81,9 @@ myonto:language a owl:DatatypeProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
-myonto:isbn13 a owl:DatatypeProperty ;
-    rdfs:label "isbn13"@en ;
-    rdfs:comment "The isbn13 of a book"@en ;
+myonto:isbn a owl:DatatypeProperty ;
+    rdfs:label "isbn"@en ;
+    rdfs:comment "The isbn of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
