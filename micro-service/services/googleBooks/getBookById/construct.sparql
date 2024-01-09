@@ -2,17 +2,17 @@
 CONSTRUCT {
     []
         myonto:name ?title;
-        myonto:publisher ?publisher;
+        myonto:hasPublisher ?publisher;
         myonto:description ?description;
         myonto:publishedDate ?publishedDate;
         myonto:language ?language;
-        myonto:author ?author.
+        myonto:hasAuthor ?author.
 
 } WHERE {
     []
         api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
-        #api:volumeInfo [api:description ?description];
+        # api:volumeInfo [api:description ?description];
         api:volumeInfo [api:publishedDate ?publishedDate];
         api:volumeInfo [api:language ?language];
         api:volumeInfo [api:publisher ?publisher].

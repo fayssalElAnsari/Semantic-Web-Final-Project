@@ -2,15 +2,15 @@
 CONSTRUCT {
     ?bookUri a myonto:Book;
         myonto:name ?title;
-        myonto:publisher ?publisher;
+        myonto:hasPublisher ?publisher;
         myonto:description ?description;
         myonto:publishedDate ?publishedDate;
         myonto:language ?language;
         myonto:isbn13 ?isbn13;
         # myonto:isbn ?isbn;
-        myonto:printType ?printType;
-        myonto:categories ?categories;
-        myonto:author ?author.
+        myonto:hasPrintType ?printType;
+        myonto:hasCategory ?categories;
+        myonto:hasAuthor ?authorUri.
 
     ?authorUri a myonto:Author;
         myonto:name ?author.
