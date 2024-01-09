@@ -6,8 +6,7 @@ CONSTRUCT {
         myonto:description ?description;
         myonto:publishedDate ?publishedDate;
         myonto:language ?language;
-        myonto:isbn13 ?isbn13;
-        # myonto:isbn ?isbn;
+        myonto:isbn ?isbn;
         myonto:hasPrintType ?printType;
         myonto:hasCategory ?categories;
         myonto:hasAuthor ?authorUri.
