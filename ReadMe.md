@@ -1,14 +1,92 @@
 ## TODO
 
 - [x] chosir un domaine (la literrature par exemple, Le choix de l'ontologie doit se baser sur la possibilite de demontrer les fonctionalites owl et skos, la quantite des donnees sur internet sur le domaine choisis. Et si c'est gratuit)
+
 - [ ] Cree une ontology, c'est dire les classes, sous-classes et toutes les relations entre eux, en utilisant owl, skos et rdfs
+    **NOT NECESSARY TO PROVIDE AN EXAMPLE OF EACH ONE**
+    - [ ] RDFS Entailments
+        - [x] rdfs:label
+        - [x] rdfs:subClassOf
+        - [x] rdfs:domain
+        - [x] rdfs:range
+        - [ ] rdfs:Resource
+        - [ ] rdfs:subPropertyOf
+        - [ ] rdfs:ContainerMembershipProperty
+        - [ ] 
+
+    - [ ] owl
+        - [ ] owl:ObjectProperty
+        - [ ] owl:DatatypeProperty
+        - [ ] owl:AnnotationProperty
+
+        - [ ] owl:SymmetricProperty
+        - [ ] owl:AsymmetricProperty
+        - [ ] owl:inverseOf
+
+        - [ ] owl:TransitiveProperty
+        - [ ] owl:propertyDisjointWith
+
+        - [ ] owl:ReflexiveProperty
+        - [ ] owl:IrreflexiveProperty 
+
+        - [ ] owl:propertyChainAxiom
+        - [ ] owl:FunctionalProperty
+        - [ ] owl:InverseFunctionalProperty
+
+        - [ ] owl:oneOf
+
+        - [ ] owl:unionOf
+        - [ ] owl:intersectionOf
+        - [ ] owl:complementOf
+
+        - [ ] owl:disjointWith
+        - [ ] owl:AllDisjointClasses
+        - [ ] owl:disjointUnionOf
+
+        - [ ] owl:equivalentClass
+        - [ ] owl:equivalentProperty
+        - [ ] owl:sameAs
+        - [ ] owl:differentFrom
+
+        - [ ] owl:hasKey
+        - [ ] owl:onProperty
+        - [ ] owl:allValuesFrom
+        - [ ] owl:someValuesFrom
+        - [ ] owl:hasValue
+
+        - [ ] owl:hasSelf
+        - [ ] owl:maxCardinality
+        - [ ] owl:qualifiedCardinality
+
+        - [ ] owl:priorVersion
+        - [ ] owl:imports
+
+        - [ ] owl:DeprecatedProperty
+        - [ ] owl:DeprecatedClass
+
+    - [ ] SHACL
+        - [ ] sh:NodeShape
+        - [ ] sh:targetClass
+        - [ ] sh:property
+            - [ ] sh:path
+            - [ ] sh:dataType
+            - [ ] sh:minCount
+            - [ ] sh:maxCount
+        - [ ] sh:targetSubjectsOf
+        - [ ] sh:targetObjectsOf
+        - [ ] sh:oneOrMorePath
+        - [ ] sh:alternativePath
+        - [ ] sh:nodeKind
+        - [ ] ...
+
+
 
 - [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL. (Est ce qu'on peut utiliser protege pour faire ca automatiquement?)
 - [ ] ajouter des contraintes SHACL pour valider les donnees 
 - [ ] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
 - [x] enrichir le graphe de connaissance (csv2rdf)
-- [ ] relier les donnees locales avec les donnees externes 
-    - [ ] trouver une solution pour mapper isb3 ou isbn13
+- [x] relier les donnees locales avec les donnees externes 
+    - [x] map isbn
 - [ ] requettes sparql (une requette pour chaque principe appris)
 - [ ] requettes SPARQL federees
     - [ ] 
