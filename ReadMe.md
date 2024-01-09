@@ -1,16 +1,20 @@
 ## TODO
 
-- [ ] chosir un domaine (la literrature par exemple, Le choix de l'ontologie doit se baser sur la possibilite de demontrer les fonctionalites owl et skos, la quantite des donnees sur internet sur le domaine choisis. Et si c'est gratuit)
+- [x] chosir un domaine (la literrature par exemple, Le choix de l'ontologie doit se baser sur la possibilite de demontrer les fonctionalites owl et skos, la quantite des donnees sur internet sur le domaine choisis. Et si c'est gratuit)
 - [ ] Cree une ontology, c'est dire les classes, sous-classes et toutes les relations entre eux, en utilisant owl, skos et rdfs
+
 - [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL. (Est ce qu'on peut utiliser protege pour faire ca automatiquement?)
 - [ ] ajouter des contraintes SHACL pour valider les donnees 
 - [ ] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
-- [ ] enrichir le graphe de connaissance (csv2rdf)
-- [ ] relier les donnees locales avec les donnees externes
+- [x] enrichir le graphe de connaissance (csv2rdf)
+- [ ] relier les donnees locales avec les donnees externes 
+    - [ ] trouver une solution pour mapper isb3 ou isbn13
 - [ ] requettes sparql (une requette pour chaque principe appris)
-- [ ] SPARQL federee
+- [ ] requettes SPARQL federees
+    - [ ] 
 - [ ] graph embeddings
 - [ ] interface pour demo
+    - [ ] serveur html
 
 Rendu du projet le **23/01 à 9h** et soutenances le 23/01 après-midi
 

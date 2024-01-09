@@ -1,19 +1,29 @@
-@prefix schema: <http://schema.org/>
+@prefix myonto: <http://myonto.org/>
 CONSTRUCT {
-    ?bookUri a schema:Book;
-        schema:name ?title;
-        schema:publisher ?publisher;
-        schema:description ?description;
-        schema:publishedDate ?publishedDate;
-        schema:language ?language;
-        schema:author ?author.
+    ?bookUri a myonto:Book;
+        myonto:name ?title;
+        myonto:publisher ?publisher;
+        myonto:description ?description;
+        myonto:publishedDate ?publishedDate;
+        myonto:language ?language;
+        myonto:isbn13 ?isbn13;
+        # myonto:isbn ?isbn;
+        myonto:printType ?printType;
+        myonto:categories ?categories;
+        myonto:author ?author.
 
-} WHERE {
+    ?authorUri a myonto:Author;
+        myonto:name ?author.
+
+} WHERE {   
     ?book
 
         api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
         #api:volumeInfo [api:description ?description];
+        api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn13]];
+        api:volumeInfo [api:printType ?printType];
+        api:volumeInfo [api:categories ?categories];
         api:volumeInfo [api:publishedDate ?publishedDate];
         api:volumeInfo [api:language ?language];
         api:id ?id;
@@ -21,4 +31,5 @@ CONSTRUCT {
 
     # customize
     bind (IRI(concat("http://localhost/ld/googleBooks/book/", ?id)) AS ?bookUri )
+    bind (IRI(concat("http://localhost/ld/googleBooks/author/", ?id)) AS ?authorUri )
 }

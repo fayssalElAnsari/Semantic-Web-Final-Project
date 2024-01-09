@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+@prefix myonto: <http://myonto.org/myonto_schema#> .
+
+#########################################
+# CLASSES
+#########################################
+myonto:Publication a owl:Class;
+    owl:equivalentClass dbo:publication;
+    rdfs:comment ""@en;
+    rdfs:label ""@en.
+
+myonto:Book a owl:Class;
+    owl:equivalentClass dbo:Book;
+    owl:subClassOf myonto:publication;
+    rdfs:comment ""@en;
+    rdfs:label ""@en.
+
+myonto:Author a owl:Class;
+    owl:equivalentClass dbo:author;
+    rdfs:comment ""@en;
+    rdfs:label ""@en.
+
+
+#################################################################
+#    Data Type Properties
+#################################################################
+myonto:hasAuthor rdf:type owl:DatatypeProperty ;
+  rdfs:label "Book Author"@en ;
+  rdfs:comment "The author of a book"@en ;
+  rdfs:domain myonto:Symptom ;
+  rdfs:range xsd:string .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+myonto:hasDiagnosis rdf:type owl:ObjectProperty ;
+              owl:inverseOf myonto:isDiagnosisFor ;
+              rdfs:domain myonto:Patient ;
+              rdfs:range myonto:Diagnosis ;
+              rdfs:comment "The diagnosis details of a patient."@en ;
+              rdfs:label "has diagnosis"@en .

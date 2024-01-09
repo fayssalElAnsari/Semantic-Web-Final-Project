@@ -1,12 +1,12 @@
-@prefix schema: <http://schema.org/>
+@prefix myonto: <http://myonto.org/>
 CONSTRUCT {
     []
-        schema:name ?title;
-        schema:publisher ?publisher;
-        schema:description ?description;
-        schema:publishedDate ?publishedDate;
-        schema:language ?language;
-        schema:author ?author.
+        myonto:name ?title;
+        myonto:publisher ?publisher;
+        myonto:description ?description;
+        myonto:publishedDate ?publishedDate;
+        myonto:language ?language;
+        myonto:author ?author.
 
 } WHERE {
     []
