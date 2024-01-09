@@ -83,22 +83,29 @@ myonto:hasPublisher a owl:ObjectProperty ;
     rdfs:label "Book Publisher"@en ;
     rdfs:comment "The publisher of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range owl:Publihser .
+    rdfs:range myonto:Publihser .
 
 myonto:hasPrintType a owl:ObjectProperty ;
     rdfs:label "Print type"@en ;
     rdfs:comment "The print type of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range owl:PrintType .
+    rdfs:range myonto:PrintType .
 
 myonto:hasCategory a owl:ObjectProperty ;
     rdfs:label "Book Category"@en ;
     rdfs:comment "The category of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range owl:Category .
+    rdfs:range myonto:Category .
 
 myonto:hasAuthor a owl:ObjectProperty ;
     rdfs:label "Book Author"@en ;
     rdfs:comment "The author of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range owl:Author .
+    rdfs:range myonto:Author .
+
+myonto:hasPublication a owl:ObjectProperty;
+    owl:inverseOf myonto:hasAuthor;
+    rdfs:label "Book Author"@en ;
+    rdfs:comment "The author of a book"@en ;
+    rdfs:domain myonto:Author ;
+    rdfs:range myonto:Book .

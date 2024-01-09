@@ -16,11 +16,11 @@
 
     - [ ] owl
         - [x] owl:ObjectProperty
-        - [ ] owl:DatatypeProperty
+        - [x] owl:DatatypeProperty
         - [ ] owl:AnnotationProperty
         - [ ] owl:SymmetricProperty
         - [ ] owl:AsymmetricProperty
-        - [ ] owl:inverseOf
+        - [x] owl:inverseOf
         - [ ] owl:TransitiveProperty
         - [ ] owl:propertyDisjointWith
         - [ ] owl:ReflexiveProperty
