@@ -76,8 +76,7 @@
 - [x] relier les donnees locales avec les donnees externes 
     - [x] map isbn
 - [ ] requettes sparql (une requette pour chaque principe appris)
-- [ ] requettes SPARQL federees
-    - [ ] 
+- [x] requettes SPARQL federees
 - [ ] graph embeddings
 - [ ] interface pour demo
     - [ ] serveur html
