@@ -7,73 +7,73 @@
             {
                 "titles": "bookID",
                 "name": "bookID",
-                "propertyUrl": "https://myonto.org/identifier"
+                "propertyUrl": "http://myonto.org/myonto_schema/identifier"
             },
             {
                 "titles": "title",
                 "name": "title",
                 "datatype": "string",
-                "propertyUrl": "http://myonto.org/name",
+                "propertyUrl": "http://myonto.org/myonto_schema/name",
                 "required": true
             },
             {
                 "titles": "authors",
                 "name": "authors",
-                "propertyUrl": "http://myonto.org/author"
+                "propertyUrl": "http://myonto.org/myonto_schema/author"
             },
             {
                 "titles": "average_rating",
                 "name": "average_rating",
                 "datatype": "float",
-                "propertyUrl": "https://myonto.org/aggregateRating"
+                "propertyUrl": "http://myonto.org/myonto_schema/aggregateRating"
             },
             {
                 "titles": "isbn",
                 "name": "isbn",
-                "propertyUrl": "https://myonto.org/isbn"
+                "propertyUrl": "http://myonto.org/myonto_schema/hasIsbn10"
             },
             {
                 "titles": "isbn13",
                 "name": "isbn13",
-                "propertyUrl": "https://myonto.org/isbn13"
+                "propertyUrl": "http://myonto.org/myonto_schema/hasIsbn13"
             },
             {
                 "titles": "language_code",
                 "name": "language_code",
-                "propertyUrl": "https://myonto.org/Language"
+                "propertyUrl": "http://myonto.org/myonto_schema/Language"
             },
             {
                 "titles": "num_pages",
                 "name": "num_pages",
                 "datatype": "int",
-                "propertyUrl": "https://myonto.org/numberOfPages"
+                "propertyUrl": "http://myonto.org/myonto_schema/numberOfPages"
             },
             {
                 "titles": "ratings_count",
                 "name": "ratings_count",
                 "datatype": "int",
-                "propertyUrl": "https://myonto.org/ratingCount"
+                "propertyUrl": "http://myonto.org/myonto_schema/ratingCount"
             },
             {
                 "titles": "text_reviews_count",
                 "name": "text_reviews_count",
                 "datatype": "int",
-                "propertyUrl": "https://myonto.org/reviewCount"
+                "propertyUrl": "http://myonto.org/myonto_schema/reviewCount"
             },
             {
                 "titles": "publication_date",
                 "name": "publication_date",
-                "propertyUrl": "https://myonto.org/datePublished"
+                "propertyUrl": "http://myonto.org/myonto_schema/datePublished"
             },
             {
                 "titles": "publisher",
                 "name": "publisher",
-                "propertyUrl": "http://myonto.org/publisher"
+                "propertyUrl": "http://myonto.org/myonto_schema/publisher"
             },
             {
                 "virtual": true,
                 "propertyUrl": "rdf:type",
-                "valueUrl": "http://myonto.org/Book"
+                "valueUrl": "http://myonto.org/myonto_schema/Book"
             }
         ],
         "primaryKey" : "title"

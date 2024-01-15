@@ -1,4 +1,4 @@
-@prefix myonto: <http://myonto.org/>
+@prefix myonto: <http://myonto.org/myonto_schema/>
 CONSTRUCT {
     ?bookUri a myonto:Book;
         myonto:name ?title;
@@ -6,10 +6,12 @@ CONSTRUCT {
         myonto:description ?description;
         myonto:publishedDate ?publishedDate;
         myonto:language ?language;
-        myonto:isbn ?isbn;
-        myonto:hasPrintType ?printType;
+        myonto:hasIsbn10 ?isbn10;
+        myonto:hasIsbn13 ?isbn13;
+        myonto:hasPrintType ?printTypeUri;
         myonto:hasCategory ?categories;
-        myonto:hasAuthor ?authorUri.
+        myonto:googleBookLink ?googleBookLink;
+        myonto:hasAuthor ?author.
 
     ?authorUri a myonto:Author;
         myonto:name ?author.
@@ -20,15 +22,24 @@ CONSTRUCT {
         api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
         #api:volumeInfo [api:description ?description];
-        api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn13]];
+        api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn; api:type ?isbnType]];
         api:volumeInfo [api:printType ?printType];
         api:volumeInfo [api:categories ?categories];
         api:volumeInfo [api:publishedDate ?publishedDate];
         api:volumeInfo [api:language ?language];
+        api:volumeInfo [api:infoLink ?googleBookLink];
         api:id ?id;
         api:volumeInfo [api:publisher ?publisher].
 
     # customize
     bind (IRI(concat("http://localhost/ld/googleBooks/book/", ?id)) AS ?bookUri )
     bind (IRI(concat("http://localhost/ld/googleBooks/author/", ?id)) AS ?authorUri )
+
+    # Determine the print type URI based on the string value of printType
+    BIND (IF(?printType = "BOOK", myonto:BookType, 
+           myonto:MagazineType) AS ?printTypeUri)
+
+    # ISBN Handling
+    BIND (IF(?isbnType = "ISBN_10", ?isbn, "") AS ?isbn10)
+    BIND (IF(?isbnType = "ISBN_13", ?isbn, "") AS ?isbn13)
 }

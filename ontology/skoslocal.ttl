@@ -9,7 +9,7 @@
 
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
-@prefix skoslocal <http://myonto.org/myonto_skos#> .
+@prefix skoslocal: <http://myonto.org/myonto_skos#> .
 @prefix myonto: <http://myonto.org/myonto_schema#> .
 
 
@@ -28,4 +28,6 @@ skoslocal:JuvenileFantasy rdf:type skos:Concept ;
   skos:altLabel "Fantaisie jeunesse"@fr ;
   skos:inScheme skoslocal:Categorie ;
   skos:broader skoslocal:Juvenile .
+
+
   

@@ -41,6 +41,14 @@ myonto:Category a owl:Class;
     rdfs:label "A category"@en;
     rdfs:comment "Category"@en.
 
+myonto:BookType a owl:Class;
+    rdfs:subClassOf myonto:PrintType ;
+    rdfs:label "Book Type"@en.
+
+myonto:MagazineType a owl:Class;
+    rdfs:subClassOf myonto:PrintType ;
+    rdfs:label "Magazine Type"@en.
+
 
 #################################################################
 #       Data Type Properties
@@ -69,12 +77,19 @@ myonto:language a owl:DatatypeProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
-myonto:isbn a owl:DatatypeProperty ;
+myonto:hasIsbn a owl:DatatypeProperty ;
     rdfs:label "isbn"@en ;
     rdfs:comment "The isbn of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
+#################################################################
+#       Annotation Properties
+#################################################################
+
+myonto:googleBookLink a owl:AnnotationProperty;
+    rdfs:label "Google Book Link"@en ;
+    rdfs:comment "The URL link to the Google Books page for a book"@en .
 
 #################################################################
 #       Object Properties
@@ -85,7 +100,7 @@ myonto:hasPublisher a owl:ObjectProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range myonto:Publihser .
 
-myonto:hasPrintType a owl:ObjectProperty ;
+myonto:hasPrintType a owl:ObjectProperty, owl:FunctionalProperty;
     rdfs:label "Print type"@en ;
     rdfs:comment "The print type of a book"@en ;
     rdfs:domain myonto:Book ;
@@ -109,3 +124,11 @@ myonto:hasPublication a owl:ObjectProperty;
     rdfs:comment "The author of a book"@en ;
     rdfs:domain myonto:Author ;
     rdfs:range myonto:Book .
+
+#########################################
+#       Disjointness
+#########################################
+[ a owl:AllDisjointClasses ;
+    owl:members (myonto:BookType myonto:MagazineType)
+] .
+

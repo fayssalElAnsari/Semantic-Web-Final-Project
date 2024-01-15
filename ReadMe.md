@@ -17,23 +17,23 @@
     - [ ] owl
         - [x] owl:ObjectProperty
         - [x] owl:DatatypeProperty
-        - [ ] owl:AnnotationProperty
+        - [x] owl:AnnotationProperty
         - [ ] owl:SymmetricProperty
         - [ ] owl:AsymmetricProperty
         - [x] owl:inverseOf
         - [ ] owl:TransitiveProperty
         - [ ] owl:propertyDisjointWith
         - [ ] owl:ReflexiveProperty
-        - [ ] owl:IrreflexiveProperty 
+        - [ ] owl:IrreflexiveProperty
         - [ ] owl:propertyChainAxiom
-        - [ ] owl:FunctionalProperty
+        - [x] owl:FunctionalProperty
         - [ ] owl:InverseFunctionalProperty
         - [ ] owl:oneOf
         - [ ] owl:unionOf
         - [ ] owl:intersectionOf
         - [ ] owl:complementOf
         - [ ] owl:disjointWith
-        - [ ] owl:AllDisjointClasses
+        - [x] owl:AllDisjointClasses
         - [ ] owl:disjointUnionOf
         - [x] owl:equivalentClass
         - [ ] owl:equivalentProperty

@@ -1,0 +1,23 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX myonto: <http://myonto.org/myonto_schema/>
+
+SELECT DISTINCT ?isbn10 ?isbn13 ?name ?author ?googleBookLink ?printType ?category WHERE {
+    	SERVICE <http://localhost/service/googleBooks/getBookByName?name=The+Ultimate+Hitchhikers+Guide+to+the+Galaxy> {
+       		?serviceBook myonto:hasIsbn10 ?serviceIsbn10.
+        		?serviceBook myonto:hasIsbn13 ?serviceIsbn13.
+		?serviceBook myonto:googleBookLink ?googleBookLink.
+		?serviceBook myonto:hasPrintType ?printType.
+		?serviceBook myonto:hasCategory ?category.
+   	}
+
+	?localBook myonto:hasIsbn10 ?isbn10.
+	?localBook myonto:hasIsbn13 ?isbn13.
+	?localBook myonto:author ?author.
+	?localBook myonto:name ?name.
+
+	FILTER(?isbn10 == ?serviceIsbn10 || ?isbn13 == ?serviceIsbn13).
+}
+
+ORDER BY ?localBook
+LIMIT 100
