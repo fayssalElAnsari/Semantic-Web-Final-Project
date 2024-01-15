@@ -1,1 +1,4 @@
 **/logs/**
+**/micro-service/services/deezer/**
+**/micro-service/services/flickr/**
+**/micro-service/services/musicbrainz/**

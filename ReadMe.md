@@ -39,7 +39,7 @@
         - [ ] owl:equivalentProperty
         - [ ] owl:sameAs
         - [ ] owl:differentFrom
-        - [ ] owl:hasKey
+        - [x] owl:hasKey
         - [ ] owl:onProperty
         - [ ] owl:allValuesFrom
         - [ ] owl:someValuesFrom

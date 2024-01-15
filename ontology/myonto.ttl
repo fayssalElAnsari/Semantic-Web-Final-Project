@@ -22,7 +22,8 @@ myonto:Publication a owl:Class;
 
 myonto:Book a owl:Class;
     owl:equivalentClass dbo:Book;
-    owl:subClassOf myonto:Publication;
+    rdfs:subClassOf myonto:Publication;
+    owl:hasKey ( myonto:hasIsbn10 myonto:hasIsbn13 );
     rdfs:label "A book"@en;
     rdfs:comment "Book"@en.
 
@@ -77,11 +78,17 @@ myonto:language a owl:DatatypeProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
-myonto:hasIsbn a owl:DatatypeProperty ;
-    rdfs:label "isbn"@en ;
-    rdfs:comment "The isbn of a book"@en ;
+myonto:hasIsbn10 a owl:DatatypeProperty ;
+    rdfs:label "isbn10"@en ;
+    rdfs:comment "The isbn10 of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:decimal .
+
+myonto:hasIsbn13 a owl:DatatypeProperty ;
+    rdfs:label "isbn13"@en ;
+    rdfs:comment "The isbn13 of a book"@en ;
+    rdfs:domain myonto:Book ;
+    rdfs:range xsd:decimal .
 
 #################################################################
 #       Annotation Properties
@@ -118,7 +125,7 @@ myonto:hasAuthor a owl:ObjectProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range myonto:Author .
 
-myonto:hasPublication a owl:ObjectProperty;
+myonto:hasBook a owl:ObjectProperty;
     owl:inverseOf myonto:hasAuthor;
     rdfs:label "Book Author"@en ;
     rdfs:comment "The author of a book"@en ;
