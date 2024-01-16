@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+<head>
+<variable name='isbn10'/>
+<variable name='isbn13'/>
+<variable name='name'/>
+<variable name='author'/>
+<variable name='googleBookLink'/>
+<variable name='printType'/>
+<variable name='category'/>
+</head>
+<results>
+<result>
+<binding name='isbn10'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>1932100563</literal></binding>
+<binding name='isbn13'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>9781932100563</literal></binding>
+<binding name='name'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>The Anthology at the End of the Universe: Leading Science Fiction Authors on Douglas Adams The Hitchhikers Guide to the Galaxy</literal></binding>
+<binding name='author'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>Glenn Yeffeth/Don DeBrandt/Cory Doctorow/Bruce Bethke/Adam Roberts/Lawrence Watt-Evans/Selina Rosen/Mark W. Tiedemann/Jacqueline Carey/Susan Sizemore/Vox Day/Stephen Baxter/A.M. Dellamonica/Marguerite Krause/John Shirley/Adam-Troy Castro/Amy Berner/Maria  Alexander/Marie-Catherine Caillava/Mike Byrne</literal></binding>
+<binding name='googleBookLink'><literal datatype='http://www.w3.org/2001/XMLSchema#string'><![CDATA[http://books.google.fr/books?id=R7y1PEKjVc0C&dq=The%2BUltimate%2BHitchhikers%2BGuide%2Bto%2Bthe%2BGalaxy&hl=&source=gbs_api]]></literal></binding>
+<binding name='printType'><uri>http://myonto.org/myonto_schema/BookType</uri></binding>
+<binding name='category'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>Literary Criticism</literal></binding>
+</result>
+<result>
+<binding name='isbn10'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>0345453743</literal></binding>
+<binding name='isbn13'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>9780345453747</literal></binding>
+<binding name='name'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>The Ultimate Hitchhikers Guide to the Galaxy (Hitchhikers Guide to the Galaxy  #1-5)</literal></binding>
+<binding name='author'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>Douglas Adams</literal></binding>
+<binding name='googleBookLink'><literal datatype='http://www.w3.org/2001/XMLSchema#string'><![CDATA[http://books.google.fr/books?id=Fu2VnsEW8S0C&dq=The%2BUltimate%2BHitchhikers%2BGuide%2Bto%2Bthe%2BGalaxy&hl=&source=gbs_api]]></literal></binding>
+<binding name='printType'><uri>http://myonto.org/myonto_schema/BookType</uri></binding>
+<binding name='category'><literal datatype='http://www.w3.org/2001/XMLSchema#string'>Fiction</literal></binding>
+</result>
+</results>
+</sparql>

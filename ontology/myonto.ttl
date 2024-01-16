@@ -139,3 +139,4 @@ myonto:hasBook a owl:ObjectProperty;
     owl:members (myonto:BookType myonto:MagazineType)
 ] .
 
+

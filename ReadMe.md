@@ -53,13 +53,13 @@
         - [ ] owl:DeprecatedClass
 
     - [ ] SHACL
-        - [ ] sh:NodeShape
-        - [ ] sh:targetClass
-        - [ ] sh:property
-            - [ ] sh:path
-            - [ ] sh:dataType
-            - [ ] sh:minCount
-            - [ ] sh:maxCount
+        - [x] sh:NodeShape
+        - [x] sh:targetClass
+        - [x] sh:property
+            - [x] sh:path
+            - [x] sh:dataType
+            - [x] sh:minCount
+            - [x] sh:maxCount
         - [ ] sh:targetSubjectsOf
         - [ ] sh:targetObjectsOf
         - [ ] sh:oneOrMorePath

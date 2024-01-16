@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+@prefix myonto: <http://myonto.org/myonto_schema#> .
+
+#########################################
+#       SHACL Constraints
+#########################################
+myonto:BookShape a sh:NodeShape ;
+    sh:targetClass myonto:Book ;
+    sh:property [
+        sh:path myonto:hasIsbn10 ;
+        sh:datatype xsd:decimal ;
+        sh:maxLength 10 ;
+        sh:minLength 10 ;
+    ] ;
+    sh:property [
+        sh:path myonto:hasIsbn13 ;
+        sh:datatype xsd:decimal ;
+        sh:maxLength 13 ;
+        sh:minLength 13 ;
+    ] .
