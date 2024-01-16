@@ -21,6 +21,21 @@ myonto:Publication a owl:Class;
     rdfs:comment "A publication"@en.
 
 myonto:Book a owl:Class;
+    rdfs:subClassOf [ 
+        a owl:Restriction;
+        owl:onProperty myonto:hasIsbn10;
+        owl:maxCardinality 1
+    ],
+    [ 
+        a owl:Restriction;
+        owl:onProperty myonto:hasIsbn13;
+        owl:maxCardinality 1
+    ],
+    [ 
+        a owl:Restriction;
+        owl:onProperty myonto:hasAuthor;
+        owl:minCardinality 1
+    ];
     owl:equivalentClass dbo:Book;
     rdfs:subClassOf myonto:Publication;
     owl:hasKey ( myonto:hasIsbn10 myonto:hasIsbn13 );
@@ -130,6 +145,14 @@ myonto:hasBook a owl:ObjectProperty;
     rdfs:label "Book Author"@en ;
     rdfs:comment "The author of a book"@en ;
     rdfs:domain myonto:Author ;
+    rdfs:range myonto:Book .
+
+myonto:hasSameAuthor a owl:ObjectProperty,
+    owl:SymmetricProperty;
+    owl:inverseOf myonto:hasAuthor;
+    rdfs:label "Author"@en ;
+    rdfs:comment "The same author of a book"@en ;
+    rdfs:domain myonto:Book ;
     rdfs:range myonto:Book .
 
 #########################################

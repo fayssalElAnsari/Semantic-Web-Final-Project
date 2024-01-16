@@ -1,6 +1,8 @@
-@prefix myonto: <http://myonto.org/myonto_schema/>
+@prefix myonto: <http://myonto.org/myonto_schema/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
 CONSTRUCT {
-    ?bookUri a myonto:Book;
+    ?bookUri a ?publicationType;
         myonto:name ?title;
         myonto:hasPublisher ?publisher;
         myonto:description ?description;
@@ -8,7 +10,7 @@ CONSTRUCT {
         myonto:language ?language;
         myonto:hasIsbn10 ?isbn10;
         myonto:hasIsbn13 ?isbn13;
-        myonto:hasPrintType ?printTypeUri;
+        #myonto:hasPrintType ?printTypeUri;
         myonto:hasCategory ?categories;
         myonto:googleBookLink ?googleBookLink;
         myonto:hasAuthor ?author.
@@ -36,8 +38,8 @@ CONSTRUCT {
     bind (IRI(concat("http://localhost/ld/googleBooks/author/", ?id)) AS ?authorUri )
 
     # Determine the print type URI based on the string value of printType
-    BIND (IF(?printType = "BOOK", myonto:BookType, 
-           myonto:MagazineType) AS ?printTypeUri)
+    BIND (IF(?printType = "BOOK", myonto:Book, 
+           myonto:Magazine) AS ?publicationType)
 
     # ISBN Handling
     BIND (IF(?isbnType = "ISBN_10", ?isbn, "") AS ?isbn10)

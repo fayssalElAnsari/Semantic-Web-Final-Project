@@ -10,7 +10,7 @@
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
 
-@prefix myonto: <http://myonto.org/myonto_schema#> .
+@prefix myonto: <http://myonto.org/myonto_schema/> .
 
 #########################################
 #       SHACL Constraints
@@ -19,13 +19,21 @@ myonto:BookShape a sh:NodeShape ;
     sh:targetClass myonto:Book ;
     sh:property [
         sh:path myonto:hasIsbn10 ;
-        sh:datatype xsd:decimal ;
+        sh:datatype xsd:string ;
         sh:maxLength 10 ;
         sh:minLength 10 ;
     ] ;
     sh:property [
         sh:path myonto:hasIsbn13 ;
-        sh:datatype xsd:decimal ;
+        sh:datatype xsd:string ;
         sh:maxLength 13 ;
         sh:minLength 13 ;
-    ] .
+    ] ;
+    sh:property [
+        sh:path myonto:publishedDate ;
+        sh:datatype xsd:date
+    ] ;
+    sh:property [
+        sh:path myonto:datePublished ;
+        sh:datatype xsd:date
+    ].

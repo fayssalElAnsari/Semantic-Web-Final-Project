@@ -15,10 +15,11 @@
         - [ ] 
 
     - [ ] owl
+        - [x] owl:Restriction
         - [x] owl:ObjectProperty
         - [x] owl:DatatypeProperty
         - [x] owl:AnnotationProperty
-        - [ ] owl:SymmetricProperty
+        - [x] owl:SymmetricProperty
         - [ ] owl:AsymmetricProperty
         - [x] owl:inverseOf
         - [ ] owl:TransitiveProperty
