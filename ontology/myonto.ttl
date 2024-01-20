@@ -171,3 +171,7 @@ myonto:LiteraryCriticism a owl:Class ;
     rdfs:label "Literary Criticism"@en ;
     rdfs:comment "A category representing the study, evaluation, and interpretation of literature."@en .
 
+myonto:Fiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Fiction"@en ;
+    rdfs:comment "A category representing fictional works including novels, stories, and narrative literature."@en .

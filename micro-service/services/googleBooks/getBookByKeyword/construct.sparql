@@ -42,6 +42,11 @@ CONSTRUCT {
     BIND (IF(?isbnType = "ISBN_13", ?isbn, "") AS ?isbn13)
 
     # Bind the category
-    # Replace 'YourCategoryCriteria' with the appropriate condition
-    BIND (IF(CONTAINS(LCASE(?apiCategories), "literary criticism"), myonto:LiteraryCriticism, ?apiCategories) AS ?categoryUri)
-}
+    BIND (
+        IF(
+            CONTAINS(LCASE(?apiCategories), "literary criticism"), 
+            myonto:LiteraryCriticism, 
+            IF(CONTAINS(LCASE(?apiCategories), "fiction"), myonto:Fiction, ?apiCategories)
+        ) AS ?categoryUri
+    )
+    }

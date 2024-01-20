@@ -1,0 +1,14 @@
+<http://myonto.org/book/Harry%20Potter%20and%20the%20Half-Blood%20Prince%20%28Harry%20Potter%20%20%236%29>
+  a <http://myonto.org/myonto_schema/Book>;
+  <http://myonto.org/myonto_schema/identifier> "1";
+  <http://myonto.org/myonto_schema/name> "Harry Potter and the Half-Blood Prince (Harry Potter  #6)";
+  <http://myonto.org/myonto_schema/author> "J.K. Rowling/Mary GrandPré";
+  <http://myonto.org/myonto_schema/aggregateRating> "4.57"^^<http://www.w3.org/2001/XMLSchema#float>;
+  <http://myonto.org/myonto_schema/hasIsbn10> "1932100563";
+  <http://myonto.org/myonto_schema/hasIsbn13> "9781932100563";
+  <http://myonto.org/myonto_schema/Language> "eng";
+  <http://myonto.org/myonto_schema/numberOfPages> "652"^^<http://www.w3.org/2001/XMLSchema#int>;
+  <http://myonto.org/myonto_schema/ratingCount> "2095690"^^<http://www.w3.org/2001/XMLSchema#int>;
+  <http://myonto.org/myonto_schema/reviewCount> "27591"^^<http://www.w3.org/2001/XMLSchema#int>;
+  <http://myonto.org/myonto_schema/datePublished> "9/16/2006";
+  <http://myonto.org/myonto_schema/publisher> "Scholastic Inc." .
