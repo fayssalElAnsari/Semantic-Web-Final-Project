@@ -16,9 +16,8 @@ CONSTRUCT {
 
     ?authorUri a myonto:Author;
         myonto:name ?author.
-} WHERE {   
-    ?book
-        api:volumeInfo [api:title ?title];
+} WHERE {
+    ?book api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
         #api:volumeInfo [api:description ?description];
         api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn; api:type ?isbnType]];
@@ -35,299 +34,157 @@ CONSTRUCT {
     BIND (IF(?printType = "BOOK", myonto:Book, myonto:Magazine) AS ?type)
     BIND (IF(?isbnType = "ISBN_10", ?isbn, "") AS ?isbn10)
     BIND (IF(?isbnType = "ISBN_13", ?isbn, "") AS ?isbn13)
-BIND (
-CONTAINS(LCASE(?apiCategories), "achillesgreekmythology"), myonto:AchillesGreekmythology, 
-        IF(CONTAINS(LCASE(?apiCategories), "activityprogramsineducation"), myonto:Activityprogramsineducation, 
-        IF(CONTAINS(LCASE(?apiCategories), "adventure"), myonto:Adventure, 
-        IF(CONTAINS(LCASE(?apiCategories), "adventurestories"), myonto:Adventurestories, 
-        IF(CONTAINS(LCASE(?apiCategories), "aeneaslegendarycharacter"), myonto:AeneasLegendarycharacter, 
-        IF(CONTAINS(LCASE(?apiCategories), "africa"), myonto:Africa, 
-        IF(CONTAINS(LCASE(?apiCategories), "africanamericanfamilies"), myonto:AfricanAmericanfamilies, 
-        IF(CONTAINS(LCASE(?apiCategories), "agedwomen"), myonto:Agedwomen, 
-        IF(CONTAINS(LCASE(?apiCategories), "agriculture"), myonto:Agriculture, 
-        IF(CONTAINS(LCASE(?apiCategories), "alcoholics"), myonto:Alcoholics, 
-        IF(CONTAINS(LCASE(?apiCategories), "americandrama"), myonto:Americandrama, 
-        IF(CONTAINS(LCASE(?apiCategories), "americanessays"), myonto:Americanessays, 
-        IF(CONTAINS(LCASE(?apiCategories), "americanfiction"), myonto:Americanfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "americans"), myonto:Americans, 
-        IF(CONTAINS(LCASE(?apiCategories), "animalsounds"), myonto:Animalsounds, 
-        IF(CONTAINS(LCASE(?apiCategories), "animals"), myonto:Animals, 
-        IF(CONTAINS(LCASE(?apiCategories), "animatedfilms"), myonto:Animatedfilms, 
-        IF(CONTAINS(LCASE(?apiCategories), "antiquesandcollectibles"), myonto:AntiquesAndCollectibles, 
-        IF(CONTAINS(LCASE(?apiCategories), "arabicliterature"), myonto:Arabicliterature, 
-        IF(CONTAINS(LCASE(?apiCategories), "architecture"), myonto:Architecture, 
-        IF(CONTAINS(LCASE(?apiCategories), "armageddon"), myonto:Armageddon, 
-        IF(CONTAINS(LCASE(?apiCategories), "art"), myonto:Art, 
-        IF(CONTAINS(LCASE(?apiCategories), "artmuseumcurators"), myonto:Artmuseumcurators, 
-        IF(CONTAINS(LCASE(?apiCategories), "artificialintelligence"), myonto:Artificialintelligence, 
-        IF(CONTAINS(LCASE(?apiCategories), "astrophysics"), myonto:Astrophysics, 
-        IF(CONTAINS(LCASE(?apiCategories), "athensgreece"), myonto:AthensGreece, 
-        IF(CONTAINS(LCASE(?apiCategories), "atomicbomb"), myonto:Atomicbomb, 
-        IF(CONTAINS(LCASE(?apiCategories), "australia"), myonto:Australia, 
-        IF(CONTAINS(LCASE(?apiCategories), "autobiographicalfiction"), myonto:Autobiographicalfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "businessandeconomics"), myonto:BUSINESSAndECONOMICS, 
-        IF(CONTAINS(LCASE(?apiCategories), "bacchantes"), myonto:Bacchantes, 
-        IF(CONTAINS(LCASE(?apiCategories), "ballet"), myonto:Ballet, 
-        IF(CONTAINS(LCASE(?apiCategories), "bankrobberies"), myonto:Bankrobberies, 
-        IF(CONTAINS(LCASE(?apiCategories), "barmitzvah"), myonto:Barmitzvah, 
-        IF(CONTAINS(LCASE(?apiCategories), "baseballplayers"), myonto:Baseballplayers, 
-        IF(CONTAINS(LCASE(?apiCategories), "bereavement"), myonto:Bereavement, 
-        IF(CONTAINS(LCASE(?apiCategories), "bestsellers"), myonto:Bestsellers, 
-        IF(CONTAINS(LCASE(?apiCategories), "bible"), myonto:Bible, 
-        IF(CONTAINS(LCASE(?apiCategories), "bibleandevolution"), myonto:Bibleandevolution, 
-        IF(CONTAINS(LCASE(?apiCategories), "bildungsromans"), myonto:Bildungsromans, 
-        IF(CONTAINS(LCASE(?apiCategories), "biographicalfiction"), myonto:Biographicalfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "biographyandautobiography"), myonto:BiographyAndAutobiography, 
-        IF(CONTAINS(LCASE(?apiCategories), "boardingschools"), myonto:Boardingschools, 
-        IF(CONTAINS(LCASE(?apiCategories), "boatsandboating"), myonto:Boatsandboating, 
-        IF(CONTAINS(LCASE(?apiCategories), "bosniaandhercegovina"), myonto:BosniaandHercegovina, 
-        IF(CONTAINS(LCASE(?apiCategories), "bosniaandherzegovina"), myonto:BosniaandHerzegovina, 
-        IF(CONTAINS(LCASE(?apiCategories), "brain"), myonto:Brain, 
-        IF(CONTAINS(LCASE(?apiCategories), "british"), myonto:British, 
-        IF(CONTAINS(LCASE(?apiCategories), "businessandeconomics"), myonto:BusinessAndEconomics, 
-        IF(CONTAINS(LCASE(?apiCategories), "businessplanning"), myonto:Businessplanning, 
-        IF(CONTAINS(LCASE(?apiCategories), "capitalistsandfinanciers"), myonto:Capitalistsandfinanciers, 
-        IF(CONTAINS(LCASE(?apiCategories), "cardsharping"), myonto:Cardsharping, 
-        IF(CONTAINS(LCASE(?apiCategories), "christianfiction"), myonto:Christianfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "christianlife"), myonto:Christianlife, 
-        IF(CONTAINS(LCASE(?apiCategories), "christianpilgrimsandpilgrimages"), myonto:Christianpilgrimsandpilgrimages, 
-        IF(CONTAINS(LCASE(?apiCategories), "christmasstories"), myonto:Christmasstories, 
-        IF(CONTAINS(LCASE(?apiCategories), "churchworkwiththepoor"), myonto:Churchworkwiththepoor, 
-        IF(CONTAINS(LCASE(?apiCategories), "civilization"), myonto:Civilization, 
-        IF(CONTAINS(LCASE(?apiCategories), "classicliterature"), myonto:Classicliterature, 
-        IF(CONTAINS(LCASE(?apiCategories), "cliffsnotes"), myonto:CliffsNotes, 
-        IF(CONTAINS(LCASE(?apiCategories), "cliffsnotes"), myonto:Cliffsnotes, 
-        IF(CONTAINS(LCASE(?apiCategories), "colombia"), myonto:Colombia, 
-        IF(CONTAINS(LCASE(?apiCategories), "comicsandgraphicnovels"), myonto:ComicsAndGraphicNovels, 
-        IF(CONTAINS(LCASE(?apiCategories), "compulsiveeating"), myonto:Compulsiveeating, 
-        IF(CONTAINS(LCASE(?apiCategories), "computers"), myonto:Computers, 
-        IF(CONTAINS(LCASE(?apiCategories), "conciousness"), myonto:Conciousness, 
-        IF(CONTAINS(LCASE(?apiCategories), "cooking"), myonto:Cooking, 
-        IF(CONTAINS(LCASE(?apiCategories), "courtship"), myonto:Courtship, 
-        IF(CONTAINS(LCASE(?apiCategories), "craftsandhobbies"), myonto:CraftsAndHobbies, 
-        IF(CONTAINS(LCASE(?apiCategories), "datingsocialcustoms"), myonto:DatingSocialcustoms, 
-        IF(CONTAINS(LCASE(?apiCategories), "death"), myonto:Death, 
-        IF(CONTAINS(LCASE(?apiCategories), "depressions"), myonto:Depressions, 
-        IF(CONTAINS(LCASE(?apiCategories), "derivativesecurities"), myonto:Derivativesecurities, 
-        IF(CONTAINS(LCASE(?apiCategories), "detectiveandmysterystories"), myonto:Detectiveandmysterystories, 
-        IF(CONTAINS(LCASE(?apiCategories), "domesticfiction"), myonto:Domesticfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "drama"), myonto:Drama, 
-        IF(CONTAINS(LCASE(?apiCategories), "dramainglés"), myonto:Dramainglés, 
-        IF(CONTAINS(LCASE(?apiCategories), "dramatists"), myonto:Dramatists, 
-        IF(CONTAINS(LCASE(?apiCategories), "duneimaginaryplace"), myonto:DuneImaginaryplace, 
-        IF(CONTAINS(LCASE(?apiCategories), "education"), myonto:Education, 
-        IF(CONTAINS(LCASE(?apiCategories), "educationaltestsandmeasurements"), myonto:Educationaltestsandmeasurements, 
-        IF(CONTAINS(LCASE(?apiCategories), "egypt"), myonto:Egypt, 
-        IF(CONTAINS(LCASE(?apiCategories), "england"), myonto:England, 
-        IF(CONTAINS(LCASE(?apiCategories), "englishfiction"), myonto:Englishfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "familyandrelationships"), myonto:FamilyAndRelationships, 
-        IF(CONTAINS(LCASE(?apiCategories), "fiction"), myonto:Fiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "floods"), myonto:Floods, 
-        IF(CONTAINS(LCASE(?apiCategories), "foreignlanguagestudy"), myonto:ForeignLanguageStudy, 
-        IF(CONTAINS(LCASE(?apiCategories), "france"), myonto:France, 
-        IF(CONTAINS(LCASE(?apiCategories), "freewillanddeterminism"), myonto:Freewillanddeterminism, 
-        IF(CONTAINS(LCASE(?apiCategories), "frontierandpioneerlife"), myonto:Frontierandpioneerlife, 
-        IF(CONTAINS(LCASE(?apiCategories), "gamesandactivities"), myonto:GamesAndActivities, 
-        IF(CONTAINS(LCASE(?apiCategories), "geishas"), myonto:Geishas, 
-        IF(CONTAINS(LCASE(?apiCategories), "greekdramatragedy"), myonto:GreekdramaTragedy, 
-        IF(CONTAINS(LCASE(?apiCategories), "groupreading"), myonto:Groupreading, 
-        IF(CONTAINS(LCASE(?apiCategories), "guitarmusicrock"), myonto:GuitarmusicRock, 
-        IF(CONTAINS(LCASE(?apiCategories), "healthandfitness"), myonto:HealthAndFitness, 
-        IF(CONTAINS(LCASE(?apiCategories), "history"), myonto:History, 
-        IF(CONTAINS(LCASE(?apiCategories), "horrortales"), myonto:Horrortales, 
-        IF(CONTAINS(LCASE(?apiCategories), "humor"), myonto:Humor, 
-        IF(CONTAINS(LCASE(?apiCategories), "inheritanceandsuccession"), myonto:Inheritanceandsuccession, 
-        IF(CONTAINS(LCASE(?apiCategories), "jews"), myonto:Jews, 
-        IF(CONTAINS(LCASE(?apiCategories), "juvenilefiction"), myonto:JuvenileFiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "juvenilenonfiction"), myonto:JuvenileNonfiction, 
-        IF(CONTAINS(LCASE(?apiCategories), "knightsandknighthood"), myonto:Knightsandknighthood, 
-        IF(CONTAINS(LCASE(?apiCategories), "languageartsanddisciplines"), myonto:LanguageArtsAndDisciplines, 
-        IF(CONTAINS(LCASE(?apiCategories), "latitude"), myonto:Latitude, 
-        IF(CONTAINS(LCASE(?apiCategories), "law"), myonto:Law, 
-        IF(CONTAINS(LCASE(?apiCategories), "leadership"), myonto:Leadership, 
-        IF(CONTAINS(LCASE(?apiCategories), "literarycollections"), myonto:LiteraryCollections, 
-        IF(CONTAINS(LCASE(?apiCategories), "literarycriticism"), myonto:LiteraryCriticism, 
-        IF(CONTAINS(LCASE(?apiCategories), "love"), myonto:Love, 
-        IF(CONTAINS(LCASE(?apiCategories), "lovestories"), myonto:Lovestories, 
-        IF(CONTAINS(LCASE(?apiCategories), "massachusetts"), myonto:Massachusetts, 
-        IF(CONTAINS(LCASE(?apiCategories), "medical"), myonto:Medical, 
-        IF(CONTAINS(LCASE(?apiCategories), "militaryartandscience"), myonto:Militaryartandscience, 
-        IF(CONTAINS(LCASE(?apiCategories), "motionpictureplays"), myonto:Motionpictureplays, 
-        IF(CONTAINS(LCASE(?apiCategories), "music"), myonto:Music, 
-        IF(CONTAINS(LCASE(?apiCategories), "nature"), myonto:Nature, 
-        IF(CONTAINS(LCASE(?apiCategories), "netherlands"), myonto:Netherlands, 
-        IF(CONTAINS(LCASE(?apiCategories), "peoplewithsocialdisabilities"), myonto:Peoplewithsocialdisabilities, 
-        IF(CONTAINS(LCASE(?apiCategories), "performingarts"), myonto:PerformingArts, 
-        IF(CONTAINS(LCASE(?apiCategories), "pets"), myonto:Pets, 
-        IF(CONTAINS(LCASE(?apiCategories), "philosophy"), myonto:Philosophy, 
-        IF(CONTAINS(LCASE(?apiCategories), "photography"), myonto:Photography, 
-        IF(CONTAINS(LCASE(?apiCategories), "pigeons"), myonto:Pigeons, 
-        IF(CONTAINS(LCASE(?apiCategories), "poetry"), myonto:Poetry, 
-        IF(CONTAINS(LCASE(?apiCategories), "politicalscience"), myonto:PoliticalScience, 
-        IF(CONTAINS(LCASE(?apiCategories), "pompeiiextinctcity"), myonto:PompeiiExtinctcity, 
-        IF(CONTAINS(LCASE(?apiCategories), "prussiagermany"), myonto:PrussiaGermany, 
-        IF(CONTAINS(LCASE(?apiCategories), "psychology"), myonto:Psychology, 
-        IF(CONTAINS(LCASE(?apiCategories), "reference"), myonto:Reference, 
-        IF(CONTAINS(LCASE(?apiCategories), "religion"), myonto:Religion, 
-        IF(CONTAINS(LCASE(?apiCategories), "russianliterature"), myonto:Russianliterature, 
-        IF(CONTAINS(LCASE(?apiCategories), "sailing"), myonto:Sailing, 
-        IF(CONTAINS(LCASE(?apiCategories), "science"), myonto:Science, 
-        IF(CONTAINS(LCASE(?apiCategories), "sex"), myonto:Sex, 
-        IF(CONTAINS(LCASE(?apiCategories), "socialscience"), myonto:SocialScience, 
-        IF(CONTAINS(LCASE(?apiCategories), "spanishlanguage"), myonto:Spanishlanguage, 
-        IF(CONTAINS(LCASE(?apiCategories), "sportsandrecreation"), myonto:SportsAndRecreation, 
-        IF(CONTAINS(LCASE(?apiCategories), "storytelling"), myonto:Storytelling, 
-        IF(CONTAINS(LCASE(?apiCategories), "technologyandengineering"), myonto:TechnologyAndEngineering, 
-        IF(CONTAINS(LCASE(?apiCategories), "texas"), myonto:Texas, 
-        IF(CONTAINS(LCASE(?apiCategories), "transportation"), myonto:Transportation, 
-        IF(CONTAINS(LCASE(?apiCategories), "travel"), myonto:Travel, 
-        IF(CONTAINS(LCASE(?apiCategories), "unitedstates"), myonto:UnitedStates, 
-        IF(CONTAINS(LCASE(?apiCategories), "youngadultfiction"), myonto:YoungAdultFiction, ?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-?apiCategories)
-    ) AS ?categoryUri
+VALUES (?categoryLabel ?categoryUri) {
+    ("achillesgreekmythology" myonto:AchillesGreekmythology)
+    ("activityprogramsineducation" myonto:Activityprogramsineducation)
+    ("adventure" myonto:Adventure)
+    ("adventurestories" myonto:Adventurestories)
+    ("aeneaslegendarycharacter" myonto:AeneasLegendarycharacter)
+    ("africa" myonto:Africa)
+    ("africanamericanfamilies" myonto:AfricanAmericanfamilies)
+    ("agedwomen" myonto:Agedwomen)
+    ("agriculture" myonto:Agriculture)
+    ("alcoholics" myonto:Alcoholics)
+    ("americandrama" myonto:Americandrama)
+    ("americanessays" myonto:Americanessays)
+    ("americanfiction" myonto:Americanfiction)
+    ("americans" myonto:Americans)
+    ("animalsounds" myonto:Animalsounds)
+    ("animals" myonto:Animals)
+    ("animatedfilms" myonto:Animatedfilms)
+    ("antiquesandcollectibles" myonto:AntiquesAndCollectibles)
+    ("arabicliterature" myonto:Arabicliterature)
+    ("architecture" myonto:Architecture)
+    ("armageddon" myonto:Armageddon)
+    ("art" myonto:Art)
+    ("artmuseumcurators" myonto:Artmuseumcurators)
+    ("artificialintelligence" myonto:Artificialintelligence)
+    ("astrophysics" myonto:Astrophysics)
+    ("athensgreece" myonto:AthensGreece)
+    ("atomicbomb" myonto:Atomicbomb)
+    ("australia" myonto:Australia)
+    ("autobiographicalfiction" myonto:Autobiographicalfiction)
+    ("businessandeconomics" myonto:BUSINESSAndECONOMICS)
+    ("bacchantes" myonto:Bacchantes)
+    ("ballet" myonto:Ballet)
+    ("bankrobberies" myonto:Bankrobberies)
+    ("barmitzvah" myonto:Barmitzvah)
+    ("baseballplayers" myonto:Baseballplayers)
+    ("bereavement" myonto:Bereavement)
+    ("bestsellers" myonto:Bestsellers)
+    ("bible" myonto:Bible)
+    ("bibleandevolution" myonto:Bibleandevolution)
+    ("bildungsromans" myonto:Bildungsromans)
+    ("biographicalfiction" myonto:Biographicalfiction)
+    ("biographyandautobiography" myonto:BiographyAndAutobiography)
+    ("boardingschools" myonto:Boardingschools)
+    ("boatsandboating" myonto:Boatsandboating)
+    ("bosniaandhercegovina" myonto:BosniaandHercegovina)
+    ("bosniaandherzegovina" myonto:BosniaandHerzegovina)
+    ("brain" myonto:Brain)
+    ("british" myonto:British)
+    ("businessandeconomics" myonto:BusinessAndEconomics)
+    ("businessplanning" myonto:Businessplanning)
+    ("capitalistsandfinanciers" myonto:Capitalistsandfinanciers)
+    ("cardsharping" myonto:Cardsharping)
+    ("christianfiction" myonto:Christianfiction)
+    ("christianlife" myonto:Christianlife)
+    ("christianpilgrimsandpilgrimages" myonto:Christianpilgrimsandpilgrimages)
+    ("christmasstories" myonto:Christmasstories)
+    ("churchworkwiththepoor" myonto:Churchworkwiththepoor)
+    ("civilization" myonto:Civilization)
+    ("classicliterature" myonto:Classicliterature)
+    ("cliffsnotes" myonto:CliffsNotes)
+    ("cliffsnotes" myonto:Cliffsnotes)
+    ("colombia" myonto:Colombia)
+    ("comicsandgraphicnovels" myonto:ComicsAndGraphicNovels)
+    ("compulsiveeating" myonto:Compulsiveeating)
+    ("computers" myonto:Computers)
+    ("conciousness" myonto:Conciousness)
+    ("cooking" myonto:Cooking)
+    ("courtship" myonto:Courtship)
+    ("craftsandhobbies" myonto:CraftsAndHobbies)
+    ("datingsocialcustoms" myonto:DatingSocialcustoms)
+    ("death" myonto:Death)
+    ("depressions" myonto:Depressions)
+    ("derivativesecurities" myonto:Derivativesecurities)
+    ("detectiveandmysterystories" myonto:Detectiveandmysterystories)
+    ("domesticfiction" myonto:Domesticfiction)
+    ("drama" myonto:Drama)
+    ("dramainglés" myonto:Dramainglés)
+    ("dramatists" myonto:Dramatists)
+    ("duneimaginaryplace" myonto:DuneImaginaryplace)
+    ("education" myonto:Education)
+    ("educationaltestsandmeasurements" myonto:Educationaltestsandmeasurements)
+    ("egypt" myonto:Egypt)
+    ("england" myonto:England)
+    ("englishfiction" myonto:Englishfiction)
+    ("familyandrelationships" myonto:FamilyAndRelationships)
+    ("fiction" myonto:Fiction)
+    ("floods" myonto:Floods)
+    ("foreignlanguagestudy" myonto:ForeignLanguageStudy)
+    ("france" myonto:France)
+    ("freewillanddeterminism" myonto:Freewillanddeterminism)
+    ("frontierandpioneerlife" myonto:Frontierandpioneerlife)
+    ("gamesandactivities" myonto:GamesAndActivities)
+    ("geishas" myonto:Geishas)
+    ("greekdramatragedy" myonto:GreekdramaTragedy)
+    ("groupreading" myonto:Groupreading)
+    ("guitarmusicrock" myonto:GuitarmusicRock)
+    ("healthandfitness" myonto:HealthAndFitness)
+    ("history" myonto:History)
+    ("horrortales" myonto:Horrortales)
+    ("humor" myonto:Humor)
+    ("inheritanceandsuccession" myonto:Inheritanceandsuccession)
+    ("jews" myonto:Jews)
+    ("juvenilefiction" myonto:JuvenileFiction)
+    ("juvenilenonfiction" myonto:JuvenileNonfiction)
+    ("knightsandknighthood" myonto:Knightsandknighthood)
+    ("languageartsanddisciplines" myonto:LanguageArtsAndDisciplines)
+    ("latitude" myonto:Latitude)
+    ("law" myonto:Law)
+    ("leadership" myonto:Leadership)
+    ("literarycollections" myonto:LiteraryCollections)
+    ("literarycriticism" myonto:LiteraryCriticism)
+    ("love" myonto:Love)
+    ("lovestories" myonto:Lovestories)
+    ("massachusetts" myonto:Massachusetts)
+    ("medical" myonto:Medical)
+    ("militaryartandscience" myonto:Militaryartandscience)
+    ("motionpictureplays" myonto:Motionpictureplays)
+    ("music" myonto:Music)
+    ("nature" myonto:Nature)
+    ("netherlands" myonto:Netherlands)
+    ("peoplewithsocialdisabilities" myonto:Peoplewithsocialdisabilities)
+    ("performingarts" myonto:PerformingArts)
+    ("pets" myonto:Pets)
+    ("philosophy" myonto:Philosophy)
+    ("photography" myonto:Photography)
+    ("pigeons" myonto:Pigeons)
+    ("poetry" myonto:Poetry)
+    ("politicalscience" myonto:PoliticalScience)
+    ("pompeiiextinctcity" myonto:PompeiiExtinctcity)
+    ("prussiagermany" myonto:PrussiaGermany)
+    ("psychology" myonto:Psychology)
+    ("reference" myonto:Reference)
+    ("religion" myonto:Religion)
+    ("russianliterature" myonto:Russianliterature)
+    ("sailing" myonto:Sailing)
+    ("science" myonto:Science)
+    ("sex" myonto:Sex)
+    ("socialscience" myonto:SocialScience)
+    ("spanishlanguage" myonto:Spanishlanguage)
+    ("sportsandrecreation" myonto:SportsAndRecreation)
+    ("storytelling" myonto:Storytelling)
+    ("technologyandengineering" myonto:TechnologyAndEngineering)
+    ("texas" myonto:Texas)
+    ("transportation" myonto:Transportation)
+    ("travel" myonto:Travel)
+    ("unitedstates" myonto:UnitedStates)
+    ("youngadultfiction" myonto:YoungAdultFiction)
+}
+
+    ?book api:volumeInfo [api:categories ?apiCategories] .
+    FILTER(STRSTARTS(LCASE(?apiCategories), ?categoryLabel))
+    BIND(IRI(?categoryUri) AS ?categoryUri)
 }

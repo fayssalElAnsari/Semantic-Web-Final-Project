@@ -1,3 +1,4 @@
+
 @prefix myonto: <http://myonto.org/myonto_schema/>
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 CONSTRUCT {
@@ -15,10 +16,8 @@ CONSTRUCT {
 
     ?authorUri a myonto:Author;
         myonto:name ?author.
-
-} WHERE {   
-    ?book
-        api:volumeInfo [api:title ?title];
+} WHERE {
+    ?book api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
         #api:volumeInfo [api:description ?description];
         api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn; api:type ?isbnType]];
@@ -30,23 +29,162 @@ CONSTRUCT {
         api:id ?id;
         api:volumeInfo [api:publisher ?publisher].
 
-    # customize
     bind (IRI(concat("http://localhost/ld/googleBooks/book/", ?id)) AS ?bookUri )
     bind (IRI(concat("http://localhost/ld/googleBooks/author/", ?id)) AS ?authorUri )
-
-    # Determine the resource type based on the string value of printType
     BIND (IF(?printType = "BOOK", myonto:Book, myonto:Magazine) AS ?type)
-
-    # ISBN Handling
     BIND (IF(?isbnType = "ISBN_10", ?isbn, "") AS ?isbn10)
     BIND (IF(?isbnType = "ISBN_13", ?isbn, "") AS ?isbn13)
+VALUES (?categoryLabel ?categoryUri) {
+    ("achillesgreekmythology" myonto:AchillesGreekmythology)
+    ("activityprogramsineducation" myonto:Activityprogramsineducation)
+    ("adventure" myonto:Adventure)
+    ("adventurestories" myonto:Adventurestories)
+    ("aeneaslegendarycharacter" myonto:AeneasLegendarycharacter)
+    ("africa" myonto:Africa)
+    ("africanamericanfamilies" myonto:AfricanAmericanfamilies)
+    ("agedwomen" myonto:Agedwomen)
+    ("agriculture" myonto:Agriculture)
+    ("alcoholics" myonto:Alcoholics)
+    ("americandrama" myonto:Americandrama)
+    ("americanessays" myonto:Americanessays)
+    ("americanfiction" myonto:Americanfiction)
+    ("americans" myonto:Americans)
+    ("animalsounds" myonto:Animalsounds)
+    ("animals" myonto:Animals)
+    ("animatedfilms" myonto:Animatedfilms)
+    ("antiquesandcollectibles" myonto:AntiquesAndCollectibles)
+    ("arabicliterature" myonto:Arabicliterature)
+    ("architecture" myonto:Architecture)
+    ("armageddon" myonto:Armageddon)
+    ("art" myonto:Art)
+    ("artmuseumcurators" myonto:Artmuseumcurators)
+    ("artificialintelligence" myonto:Artificialintelligence)
+    ("astrophysics" myonto:Astrophysics)
+    ("athensgreece" myonto:AthensGreece)
+    ("atomicbomb" myonto:Atomicbomb)
+    ("australia" myonto:Australia)
+    ("autobiographicalfiction" myonto:Autobiographicalfiction)
+    ("businessandeconomics" myonto:BUSINESSAndECONOMICS)
+    ("bacchantes" myonto:Bacchantes)
+    ("ballet" myonto:Ballet)
+    ("bankrobberies" myonto:Bankrobberies)
+    ("barmitzvah" myonto:Barmitzvah)
+    ("baseballplayers" myonto:Baseballplayers)
+    ("bereavement" myonto:Bereavement)
+    ("bestsellers" myonto:Bestsellers)
+    ("bible" myonto:Bible)
+    ("bibleandevolution" myonto:Bibleandevolution)
+    ("bildungsromans" myonto:Bildungsromans)
+    ("biographicalfiction" myonto:Biographicalfiction)
+    ("biographyandautobiography" myonto:BiographyAndAutobiography)
+    ("boardingschools" myonto:Boardingschools)
+    ("boatsandboating" myonto:Boatsandboating)
+    ("bosniaandhercegovina" myonto:BosniaandHercegovina)
+    ("bosniaandherzegovina" myonto:BosniaandHerzegovina)
+    ("brain" myonto:Brain)
+    ("british" myonto:British)
+    ("businessandeconomics" myonto:BusinessAndEconomics)
+    ("businessplanning" myonto:Businessplanning)
+    ("capitalistsandfinanciers" myonto:Capitalistsandfinanciers)
+    ("cardsharping" myonto:Cardsharping)
+    ("christianfiction" myonto:Christianfiction)
+    ("christianlife" myonto:Christianlife)
+    ("christianpilgrimsandpilgrimages" myonto:Christianpilgrimsandpilgrimages)
+    ("christmasstories" myonto:Christmasstories)
+    ("churchworkwiththepoor" myonto:Churchworkwiththepoor)
+    ("civilization" myonto:Civilization)
+    ("classicliterature" myonto:Classicliterature)
+    ("cliffsnotes" myonto:CliffsNotes)
+    ("cliffsnotes" myonto:Cliffsnotes)
+    ("colombia" myonto:Colombia)
+    ("comicsandgraphicnovels" myonto:ComicsAndGraphicNovels)
+    ("compulsiveeating" myonto:Compulsiveeating)
+    ("computers" myonto:Computers)
+    ("conciousness" myonto:Conciousness)
+    ("cooking" myonto:Cooking)
+    ("courtship" myonto:Courtship)
+    ("craftsandhobbies" myonto:CraftsAndHobbies)
+    ("datingsocialcustoms" myonto:DatingSocialcustoms)
+    ("death" myonto:Death)
+    ("depressions" myonto:Depressions)
+    ("derivativesecurities" myonto:Derivativesecurities)
+    ("detectiveandmysterystories" myonto:Detectiveandmysterystories)
+    ("domesticfiction" myonto:Domesticfiction)
+    ("drama" myonto:Drama)
+    ("dramaingl�s" myonto:Dramaingl�s)
+    ("dramatists" myonto:Dramatists)
+    ("duneimaginaryplace" myonto:DuneImaginaryplace)
+    ("education" myonto:Education)
+    ("educationaltestsandmeasurements" myonto:Educationaltestsandmeasurements)
+    ("egypt" myonto:Egypt)
+    ("england" myonto:England)
+    ("englishfiction" myonto:Englishfiction)
+    ("familyandrelationships" myonto:FamilyAndRelationships)
+    ("fiction" myonto:Fiction)
+    ("floods" myonto:Floods)
+    ("foreignlanguagestudy" myonto:ForeignLanguageStudy)
+    ("france" myonto:France)
+    ("freewillanddeterminism" myonto:Freewillanddeterminism)
+    ("frontierandpioneerlife" myonto:Frontierandpioneerlife)
+    ("gamesandactivities" myonto:GamesAndActivities)
+    ("geishas" myonto:Geishas)
+    ("greekdramatragedy" myonto:GreekdramaTragedy)
+    ("groupreading" myonto:Groupreading)
+    ("guitarmusicrock" myonto:GuitarmusicRock)
+    ("healthandfitness" myonto:HealthAndFitness)
+    ("history" myonto:History)
+    ("horrortales" myonto:Horrortales)
+    ("humor" myonto:Humor)
+    ("inheritanceandsuccession" myonto:Inheritanceandsuccession)
+    ("jews" myonto:Jews)
+    ("juvenilefiction" myonto:JuvenileFiction)
+    ("juvenilenonfiction" myonto:JuvenileNonfiction)
+    ("knightsandknighthood" myonto:Knightsandknighthood)
+    ("languageartsanddisciplines" myonto:LanguageArtsAndDisciplines)
+    ("latitude" myonto:Latitude)
+    ("law" myonto:Law)
+    ("leadership" myonto:Leadership)
+    ("literarycollections" myonto:LiteraryCollections)
+    ("literarycriticism" myonto:LiteraryCriticism)
+    ("love" myonto:Love)
+    ("lovestories" myonto:Lovestories)
+    ("massachusetts" myonto:Massachusetts)
+    ("medical" myonto:Medical)
+    ("militaryartandscience" myonto:Militaryartandscience)
+    ("motionpictureplays" myonto:Motionpictureplays)
+    ("music" myonto:Music)
+    ("nature" myonto:Nature)
+    ("netherlands" myonto:Netherlands)
+    ("peoplewithsocialdisabilities" myonto:Peoplewithsocialdisabilities)
+    ("performingarts" myonto:PerformingArts)
+    ("pets" myonto:Pets)
+    ("philosophy" myonto:Philosophy)
+    ("photography" myonto:Photography)
+    ("pigeons" myonto:Pigeons)
+    ("poetry" myonto:Poetry)
+    ("politicalscience" myonto:PoliticalScience)
+    ("pompeiiextinctcity" myonto:PompeiiExtinctcity)
+    ("prussiagermany" myonto:PrussiaGermany)
+    ("psychology" myonto:Psychology)
+    ("reference" myonto:Reference)
+    ("religion" myonto:Religion)
+    ("russianliterature" myonto:Russianliterature)
+    ("sailing" myonto:Sailing)
+    ("science" myonto:Science)
+    ("sex" myonto:Sex)
+    ("socialscience" myonto:SocialScience)
+    ("spanishlanguage" myonto:Spanishlanguage)
+    ("sportsandrecreation" myonto:SportsAndRecreation)
+    ("storytelling" myonto:Storytelling)
+    ("technologyandengineering" myonto:TechnologyAndEngineering)
+    ("texas" myonto:Texas)
+    ("transportation" myonto:Transportation)
+    ("travel" myonto:Travel)
+    ("unitedstates" myonto:UnitedStates)
+    ("youngadultfiction" myonto:YoungAdultFiction)
+}
 
-    # Bind the category
-    BIND (
-        IF(
-            CONTAINS(LCASE(?apiCategories), "literary criticism"), 
-            myonto:LiteraryCriticism, 
-            IF(CONTAINS(LCASE(?apiCategories), "fiction"), myonto:Fiction, ?apiCategories)
-        ) AS ?categoryUri
-    )
-    }
+    ?book api:volumeInfo [api:categories ?apiCategories] .
+    FILTER(STRSTARTS(LCASE(?apiCategories), ?categoryLabel))
+    BIND(IRI(?categoryUri) AS ?categoryUri)
+}
