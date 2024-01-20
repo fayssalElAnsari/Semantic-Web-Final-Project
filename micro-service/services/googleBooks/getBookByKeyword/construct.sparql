@@ -1,8 +1,7 @@
-@prefix myonto: <http://myonto.org/myonto_schema/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
+@prefix myonto: <http://myonto.org/myonto_schema/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 CONSTRUCT {
-    ?bookUri a ?publicationType;
+    ?bookUri rdf:type ?type;
         myonto:name ?title;
         myonto:hasPublisher ?publisher;
         myonto:description ?description;
@@ -10,8 +9,7 @@ CONSTRUCT {
         myonto:language ?language;
         myonto:hasIsbn10 ?isbn10;
         myonto:hasIsbn13 ?isbn13;
-        #myonto:hasPrintType ?printTypeUri;
-        myonto:hasCategory ?categories;
+        myonto:hasCategory ?categoryUri;
         myonto:googleBookLink ?googleBookLink;
         myonto:hasAuthor ?author.
 
@@ -20,13 +18,12 @@ CONSTRUCT {
 
 } WHERE {   
     ?book
-
         api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
         #api:volumeInfo [api:description ?description];
         api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn; api:type ?isbnType]];
         api:volumeInfo [api:printType ?printType];
-        api:volumeInfo [api:categories ?categories];
+        api:volumeInfo [api:categories ?apiCategories];
         api:volumeInfo [api:publishedDate ?publishedDate];
         api:volumeInfo [api:language ?language];
         api:volumeInfo [api:infoLink ?googleBookLink];
@@ -37,11 +34,14 @@ CONSTRUCT {
     bind (IRI(concat("http://localhost/ld/googleBooks/book/", ?id)) AS ?bookUri )
     bind (IRI(concat("http://localhost/ld/googleBooks/author/", ?id)) AS ?authorUri )
 
-    # Determine the print type URI based on the string value of printType
-    BIND (IF(?printType = "BOOK", myonto:Book, 
-           myonto:Magazine) AS ?publicationType)
+    # Determine the resource type based on the string value of printType
+    BIND (IF(?printType = "BOOK", myonto:Book, myonto:Magazine) AS ?type)
 
     # ISBN Handling
     BIND (IF(?isbnType = "ISBN_10", ?isbn, "") AS ?isbn10)
     BIND (IF(?isbnType = "ISBN_13", ?isbn, "") AS ?isbn13)
+
+    # Bind the category
+    # Replace 'YourCategoryCriteria' with the appropriate condition
+    BIND (IF(CONTAINS(LCASE(?apiCategories), "literary criticism"), myonto:LiteraryCriticism, ?apiCategories) AS ?categoryUri)
 }

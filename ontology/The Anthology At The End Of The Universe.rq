@@ -2,22 +2,21 @@ PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX myonto: <http://myonto.org/myonto_schema/>
 
-SELECT DISTINCT ?isbn10 ?isbn13 ?name ?author ?googleBookLink ?category ?type WHERE {
-    	SERVICE <http://localhost/service/googleBooks/getBookByName?name=The+Ultimate+Hitchhikers+Guide+to+the+Galaxy> {
+SELECT DISTINCT ?localBook ?name ?isbn10 ?isbn13  ?googleBookLink ?category ?categories WHERE {
+    	SERVICE <http://localhost/service/googleBooks/getBookByKeyword?keyword=1932100563> {
        		?serviceBook myonto:hasIsbn10 ?serviceIsbn10.
         		?serviceBook myonto:hasIsbn13 ?serviceIsbn13.
 		?serviceBook myonto:googleBookLink ?googleBookLink.
 		?serviceBook myonto:hasCategory ?category.
-		?serviceBook rdf:type ?type.
+		?serviceBook myonto:name ?name.
+		#?serviceBook rdf:type ?type.
    	}
 
 	?localBook myonto:hasIsbn10 ?isbn10.
 	?localBook myonto:hasIsbn13 ?isbn13.
-	?localBook myonto:author ?author.
-	?localBook myonto:name ?name.
 
 	FILTER(?isbn10 == ?serviceIsbn10 || ?isbn13 == ?serviceIsbn13).
 }
 
 ORDER BY ?localBook
-LIMIT 5
+LIMIT 30

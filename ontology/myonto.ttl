@@ -148,6 +148,7 @@ myonto:hasBook a owl:ObjectProperty;
     rdfs:range myonto:Book .
 
 myonto:hasSameAuthor a owl:ObjectProperty,
+    owl:TransitiveProperty,
     owl:SymmetricProperty;
     owl:inverseOf myonto:hasAuthor;
     rdfs:label "Author"@en ;
@@ -162,4 +163,11 @@ myonto:hasSameAuthor a owl:ObjectProperty,
     owl:members (myonto:BookType myonto:MagazineType)
 ] .
 
+#########################################
+#      Categories
+#########################################
+myonto:LiteraryCriticism a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Literary Criticism"@en ;
+    rdfs:comment "A category representing the study, evaluation, and interpretation of literature."@en .
 
