@@ -2,14 +2,7 @@ import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON
 from tqdm import tqdm
 import requests
-
-def query_custom_service(isbn, base_url):
-    url = f"{base_url}?keyword={isbn}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.text  # Or response.json() based on the response format
-    else:
-        return None
+import xml.etree.ElementTree as ET
 
 # Function to read TTL file and extract ISBNs
 def extract_isbns(ttl_file):
@@ -38,61 +31,64 @@ def extract_isbns(ttl_file):
         print(f"Error reading or parsing the TTL file: {e}")
         return [], []
 
-# Function to run SPARQL query
-def run_sparql_query(isbn, is_isbn10, base_endpoint_url):
+def query_custom_service(isbn, is_isbn10, base_url):
+    url = f"{base_url}?keyword={isbn}"
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    isbn_predicate = "myonto:hasIsbn10" if is_isbn10 else "myonto:hasIsbn13"
+    
+    query = f"""
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX myonto: <http://myonto.org/myonto_schema/>
+        SELECT DISTINCT * WHERE {{
+            ?serviceBook {isbn_predicate} "{isbn}".
+            ?serviceBook myonto:hasIsbn13 ?serviceIsbn13.
+            ?serviceBook myonto:googleBookLink ?googleBookLink.
+            ?serviceBook myonto:hasCategory ?category.
+            ?serviceBook myonto:name ?name.
+        }} LIMIT 30
+    """
+    body = {'query': query}
+
     try:
-        # Construct the full endpoint URL including the ISBN
-        endpoint_url = f"{base_endpoint_url}?keyword={isbn}"
-        sparql = SPARQLWrapper(endpoint_url)
-
-        query = """
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            PREFIX myonto: <http://myonto.org/myonto_schema/>
-            SELECT DISTINCT * WHERE {
-                  ?serviceBook myonto:hasIsbn10 ?serviceIsbn10.
-                  ?serviceBook myonto:hasIsbn13 ?serviceIsbn13.
-                  ?serviceBook myonto:googleBookLink ?googleBookLink.
-                  ?serviceBook myonto:hasCategory ?category.
-                  ?serviceBook myonto:name ?name.
-            } LIMIT 30
-        """
-        sparql.setQuery(query)
-        sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
-
-        if results["results"]["bindings"]:
-            print(f"Results found for ISBN {isbn}")
-            return True
+        response = requests.post(url, headers=headers, data=body)
+        if response.status_code == 200:
+            #print(f"Response for ISBN {isbn}: {response.content}")  # Print the raw response content
+            return response.content  # Return the raw XML content
         else:
-            print(f"No results for ISBN {isbn}")
-            return False
+            print(f"HTTP request failed for ISBN {isbn}: Status code {response.status_code}, Response: {response.text}")
+            return None
+    except Exception as e:
+        print(f"Error making HTTP request for ISBN {isbn}: {e}")
+        return None
+
+def parse_xml_response(xml_data):
+    try:
+        root = ET.fromstring(xml_data)
+        categories = set()
+
+        for result in root.findall('.//{http://www.w3.org/2005/sparql-results#}result'):
+            category_binding = result.find('.//{http://www.w3.org/2005/sparql-results#}binding[@name="category"]')
+            if category_binding is not None:
+                category_uri = category_binding.find('.//{http://www.w3.org/2005/sparql-results#}uri')
+                category_literal = category_binding.find('.//{http://www.w3.org/2005/sparql-results#}literal')
+
+                if category_uri is not None:
+                    categories.add(category_uri.text)
+                elif category_literal is not None:
+                    categories.add(category_literal.text)
+
+        return categories
 
     except Exception as e:
-        print(f"Error querying the SPARQL endpoint for ISBN {isbn}: {e}")
-        return False
+        print(f"Error parsing XML response: {e}")
+        return set()
+
+
 
 # Main script
-# def main():
-#     ttl_file = 'books_debug.ttl'  # Update with the path to your TTL file
-#     endpoint_url = 'http://localhost/service/googleBooks/getBookByKeyword'  # Replace with your actual SPARQL endpoint URL
-
-#     isbn10s, isbn13s = extract_isbns(ttl_file)
-
-#     if not (isbn10s or isbn13s):
-#         print("No ISBNs extracted. Exiting.")
-#         return
-
-#     with open('common_keywords.txt', 'w') as file:
-#         for isbn in tqdm(isbn10s + isbn13s, desc="Processing ISBNs"):
-#             if run_sparql_query(isbn, isbn in isbn10s, endpoint_url):
-#                 file.write(f"{isbn}\n")
-#                 file.flush()
-
-#     print("Common keywords saved to 'common_keywords.txt'")
-
 def main():
-    ttl_file = 'books_debug.ttl'  # Update with the path to your TTL file
+    ttl_file = 'books.ttl'  # Update with the path to your TTL file
     base_url = 'http://localhost/service/googleBooks/getBookByKeyword'  # Base URL of the custom service
 
     isbn10s, isbn13s = extract_isbns(ttl_file)
@@ -101,17 +97,16 @@ def main():
         print("No ISBNs extracted. Exiting.")
         return
 
-    with open('common_keywords.txt', 'w') as file:
+    with open('extracted_categories.txt', 'w') as file:
         for isbn in tqdm(isbn10s + isbn13s, desc="Processing ISBNs"):
-            result = query_custom_service(isbn, base_url)
-            if result:
-                file.write(f"{isbn}\n")
-                file.flush()
-                print(f"ISBN {isbn} written to file.")
-            else:
-                print(f"No valid response for ISBN {isbn}.")
+            xml_response = query_custom_service(isbn, isbn in isbn10s, base_url)
+            if xml_response:
+                categories = parse_xml_response(xml_response)
+                for category in categories:
+                    file.write(f"{isbn}: {category}\n")
+                    file.flush()
 
-    print("Common keywords saved to 'common_keywords.txt'")
+    print("Extracted categories saved to 'extracted_categories.txt'")
 
 if __name__ == "__main__":
     main()

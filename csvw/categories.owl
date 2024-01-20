@@ -1,0 +1,852 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix myonto: <http://myonto.org/myonto_schema#> .
+    
+
+myonto:AchillesGreekmythology a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Achilles (Greek mythology)"@en ;
+    rdfs:comment "Category representing Achilles (Greek mythology)."@en .
+
+myonto:Activityprogramsineducation a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Activity programs in education"@en ;
+    rdfs:comment "Category representing Activity programs in education."@en .
+
+myonto:Adventure a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Adventure"@en ;
+    rdfs:comment "Category representing Adventure."@en .
+
+myonto:Adventurestories a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Adventure stories"@en ;
+    rdfs:comment "Category representing Adventure stories."@en .
+
+myonto:AeneasLegendarycharacter a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Aeneas (Legendary character)"@en ;
+    rdfs:comment "Category representing Aeneas (Legendary character)."@en .
+
+myonto:Africa a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Africa"@en ;
+    rdfs:comment "Category representing Africa."@en .
+
+myonto:AfricanAmericanfamilies a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "African American families"@en ;
+    rdfs:comment "Category representing African American families."@en .
+
+myonto:Agedwomen a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Aged women"@en ;
+    rdfs:comment "Category representing Aged women."@en .
+
+myonto:Agriculture a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Agriculture"@en ;
+    rdfs:comment "Category representing Agriculture."@en .
+
+myonto:Ahab,CaptainFictitiouscharacter a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Ahab, Captain (Fictitious character)"@en ;
+    rdfs:comment "Category representing Ahab, Captain (Fictitious character)."@en .
+
+myonto:Alcoholics a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Alcoholics"@en ;
+    rdfs:comment "Category representing Alcoholics."@en .
+
+myonto:Americandrama a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "American drama"@en ;
+    rdfs:comment "Category representing American drama."@en .
+
+myonto:Americanessays a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "American essays"@en ;
+    rdfs:comment "Category representing American essays."@en .
+
+myonto:Americanfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "American fiction"@en ;
+    rdfs:comment "Category representing American fiction."@en .
+
+myonto:Americans a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Americans"@en ;
+    rdfs:comment "Category representing Americans."@en .
+
+myonto:Animalsounds a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Animal sounds"@en ;
+    rdfs:comment "Category representing Animal sounds."@en .
+
+myonto:Animals a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Animals"@en ;
+    rdfs:comment "Category representing Animals."@en .
+
+myonto:Animatedfilms a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Animated films"@en ;
+    rdfs:comment "Category representing Animated films."@en .
+
+myonto:Anti-Americanism a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Anti-Americanism"@en ;
+    rdfs:comment "Category representing Anti-Americanism."@en .
+
+myonto:AntiquesAndCollectibles a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Antiques & Collectibles"@en ;
+    rdfs:comment "Category representing Antiques & Collectibles."@en .
+
+myonto:Arabicliterature a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Arabic literature"@en ;
+    rdfs:comment "Category representing Arabic literature."@en .
+
+myonto:Architecture a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Architecture"@en ;
+    rdfs:comment "Category representing Architecture."@en .
+
+myonto:Armageddon a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Armageddon"@en ;
+    rdfs:comment "Category representing Armageddon."@en .
+
+myonto:Art a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Art"@en ;
+    rdfs:comment "Category representing Art."@en .
+
+myonto:Artmuseumcurators a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Art museum curators"@en ;
+    rdfs:comment "Category representing Art museum curators."@en .
+
+myonto:Artificialintelligence a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Artificial intelligence"@en ;
+    rdfs:comment "Category representing Artificial intelligence."@en .
+
+myonto:Artists'models a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Artists' models"@en ;
+    rdfs:comment "Category representing Artists' models."@en .
+
+myonto:Asperger'ssyndrome a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Asperger's syndrome"@en ;
+    rdfs:comment "Category representing Asperger's syndrome."@en .
+
+myonto:Astrophysics a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Astrophysics"@en ;
+    rdfs:comment "Category representing Astrophysics."@en .
+
+myonto:AthensGreece a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Athens (Greece)"@en ;
+    rdfs:comment "Category representing Athens (Greece)."@en .
+
+myonto:Atomicbomb a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Atomic bomb"@en ;
+    rdfs:comment "Category representing Atomic bomb."@en .
+
+myonto:Aufsatzsammlung-Englisch-Massenmedien-Sprache a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Aufsatzsammlung - Englisch - Massenmedien - Sprache"@en ;
+    rdfs:comment "Category representing Aufsatzsammlung - Englisch - Massenmedien - Sprache."@en .
+
+myonto:Australia a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Australia"@en ;
+    rdfs:comment "Category representing Australia."@en .
+
+myonto:Authors,American a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Authors, American"@en ;
+    rdfs:comment "Category representing Authors, American."@en .
+
+myonto:Authors,Arab a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Authors, Arab"@en ;
+    rdfs:comment "Category representing Authors, Arab."@en .
+
+myonto:Authors,Chilean a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Authors, Chilean"@en ;
+    rdfs:comment "Category representing Authors, Chilean."@en .
+
+myonto:Autobiographicalfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Autobiographical fiction"@en ;
+    rdfs:comment "Category representing Autobiographical fiction."@en .
+
+myonto:BUSINESSAndECONOMICS a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "BUSINESS & ECONOMICS"@en ;
+    rdfs:comment "Category representing BUSINESS & ECONOMICS."@en .
+
+myonto:Bacchantes a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bacchantes"@en ;
+    rdfs:comment "Category representing Bacchantes."@en .
+
+myonto:Ballet a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Ballet"@en ;
+    rdfs:comment "Category representing Ballet."@en .
+
+myonto:Bankrobberies a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bank robberies"@en ;
+    rdfs:comment "Category representing Bank robberies."@en .
+
+myonto:Barmitzvah a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bar mitzvah"@en ;
+    rdfs:comment "Category representing Bar mitzvah."@en .
+
+myonto:Baseballplayers a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Baseball players"@en ;
+    rdfs:comment "Category representing Baseball players."@en .
+
+myonto:Bereavement a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bereavement"@en ;
+    rdfs:comment "Category representing Bereavement."@en .
+
+myonto:Bestsellers a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Best sellers"@en ;
+    rdfs:comment "Category representing Best sellers."@en .
+
+myonto:Bible a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bible"@en ;
+    rdfs:comment "Category representing Bible."@en .
+
+myonto:Bibleandevolution a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bible and evolution"@en ;
+    rdfs:comment "Category representing Bible and evolution."@en .
+
+myonto:Bildungsromans a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bildungsromans"@en ;
+    rdfs:comment "Category representing Bildungsromans."@en .
+
+myonto:Biographicalfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Biographical fiction"@en ;
+    rdfs:comment "Category representing Biographical fiction."@en .
+
+myonto:BiographyAndAutobiography a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Biography & Autobiography"@en ;
+    rdfs:comment "Category representing Biography & Autobiography."@en .
+
+myonto:Boardingschools a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Boarding schools"@en ;
+    rdfs:comment "Category representing Boarding schools."@en .
+
+myonto:Boatsandboating a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Boats and boating"@en ;
+    rdfs:comment "Category representing Boats and boating."@en .
+
+myonto:Body,MindAndSpirit a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Body, Mind & Spirit"@en ;
+    rdfs:comment "Category representing Body, Mind & Spirit."@en .
+
+myonto:Bond,JamesFictitiouscharacter a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bond, James (Fictitious character)"@en ;
+    rdfs:comment "Category representing Bond, James (Fictitious character)."@en .
+
+myonto:BosniaandHercegovina a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bosnia and Hercegovina"@en ;
+    rdfs:comment "Category representing Bosnia and Hercegovina."@en .
+
+myonto:BosniaandHerzegovina a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Bosnia and Herzegovina"@en ;
+    rdfs:comment "Category representing Bosnia and Herzegovina."@en .
+
+myonto:Brain a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Brain"@en ;
+    rdfs:comment "Category representing Brain."@en .
+
+myonto:British a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "British"@en ;
+    rdfs:comment "Category representing British."@en .
+
+myonto:BusinessAndEconomics a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Business & Economics"@en ;
+    rdfs:comment "Category representing Business & Economics."@en .
+
+myonto:Businessplanning a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Business planning"@en ;
+    rdfs:comment "Category representing Business planning."@en .
+
+myonto:Capitalistsandfinanciers a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Capitalists and financiers"@en ;
+    rdfs:comment "Category representing Capitalists and financiers."@en .
+
+myonto:Cardsharping a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cardsharping"@en ;
+    rdfs:comment "Category representing Cardsharping."@en .
+
+myonto:Children'spoetry,English a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Children's poetry, English"@en ;
+    rdfs:comment "Category representing Children's poetry, English."@en .
+
+myonto:Children'sstories a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Children's stories"@en ;
+    rdfs:comment "Category representing Children's stories."@en .
+
+myonto:Christianfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Christian fiction"@en ;
+    rdfs:comment "Category representing Christian fiction."@en .
+
+myonto:Christianlife a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Christian life"@en ;
+    rdfs:comment "Category representing Christian life."@en .
+
+myonto:Christianpilgrimsandpilgrimages a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Christian pilgrims and pilgrimages"@en ;
+    rdfs:comment "Category representing Christian pilgrims and pilgrimages."@en .
+
+myonto:Christmasstories a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Christmas stories"@en ;
+    rdfs:comment "Category representing Christmas stories."@en .
+
+myonto:Churchworkwiththepoor a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Church work with the poor"@en ;
+    rdfs:comment "Category representing Church work with the poor."@en .
+
+myonto:Civilization a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Civilization"@en ;
+    rdfs:comment "Category representing Civilization."@en .
+
+myonto:Classicliterature a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Classic literature"@en ;
+    rdfs:comment "Category representing Classic literature."@en .
+
+myonto:CliffsNotes a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cliffs Notes"@en ;
+    rdfs:comment "Category representing Cliffs Notes."@en .
+
+myonto:Cliffsnotes a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cliffs notes"@en ;
+    rdfs:comment "Category representing Cliffs notes."@en .
+
+myonto:Colombia a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Colombia"@en ;
+    rdfs:comment "Category representing Colombia."@en .
+
+myonto:ComicsAndGraphicNovels a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Comics & Graphic Novels"@en ;
+    rdfs:comment "Category representing Comics & Graphic Novels."@en .
+
+myonto:Compulsiveeating a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Compulsive eating"@en ;
+    rdfs:comment "Category representing Compulsive eating."@en .
+
+myonto:Computers a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Computers"@en ;
+    rdfs:comment "Category representing Computers."@en .
+
+myonto:Conciousness a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Conciousness"@en ;
+    rdfs:comment "Category representing Conciousness."@en .
+
+myonto:Cookery,French a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cookery, French"@en ;
+    rdfs:comment "Category representing Cookery, French."@en .
+
+myonto:Cooking a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cooking"@en ;
+    rdfs:comment "Category representing Cooking."@en .
+
+myonto:Cooking,Italian a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Cooking, Italian"@en ;
+    rdfs:comment "Category representing Cooking, Italian."@en .
+
+myonto:Courtship a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Courtship"@en ;
+    rdfs:comment "Category representing Courtship."@en .
+
+myonto:CraftsAndHobbies a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Crafts & Hobbies"@en ;
+    rdfs:comment "Category representing Crafts & Hobbies."@en .
+
+myonto:DatingSocialcustoms a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Dating (Social customs)"@en ;
+    rdfs:comment "Category representing Dating (Social customs)."@en .
+
+myonto:Death a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Death"@en ;
+    rdfs:comment "Category representing Death."@en .
+
+myonto:Dent,ArthurFictitiouscharacter a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Dent, Arthur (Fictitious character)"@en ;
+    rdfs:comment "Category representing Dent, Arthur (Fictitious character)."@en .
+
+myonto:Depressions a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Depressions"@en ;
+    rdfs:comment "Category representing Depressions."@en .
+
+myonto:Derivativesecurities a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Derivative securities"@en ;
+    rdfs:comment "Category representing Derivative securities."@en .
+
+myonto:Detectiveandmysterystories a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Detective and mystery stories"@en ;
+    rdfs:comment "Category representing Detective and mystery stories."@en .
+
+myonto:Domesticfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Domestic fiction"@en ;
+    rdfs:comment "Category representing Domestic fiction."@en .
+
+myonto:Drama a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Drama"@en ;
+    rdfs:comment "Category representing Drama."@en .
+
+myonto:Dramainglés a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Drama inglés"@en ;
+    rdfs:comment "Category representing Drama inglés."@en .
+
+myonto:Dramatists a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Dramatists"@en ;
+    rdfs:comment "Category representing Dramatists."@en .
+
+myonto:DuneImaginaryplace a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Dune (Imaginary place)"@en ;
+    rdfs:comment "Category representing Dune (Imaginary place)."@en .
+
+myonto:Education a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Education"@en ;
+    rdfs:comment "Category representing Education."@en .
+
+myonto:Educationaltestsandmeasurements a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Educational tests and measurements"@en ;
+    rdfs:comment "Category representing Educational tests and measurements."@en .
+
+myonto:Egypt a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Egypt"@en ;
+    rdfs:comment "Category representing Egypt."@en .
+
+myonto:England a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "England"@en ;
+    rdfs:comment "Category representing England."@en .
+
+myonto:Englishfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "English fiction"@en ;
+    rdfs:comment "Category representing English fiction."@en .
+
+myonto:Fables,Latin a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Fables, Latin"@en ;
+    rdfs:comment "Category representing Fables, Latin."@en .
+
+myonto:FamilyAndRelationships a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Family & Relationships"@en ;
+    rdfs:comment "Category representing Family & Relationships."@en .
+
+myonto:Fiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Fiction"@en ;
+    rdfs:comment "Category representing Fiction."@en .
+
+myonto:Floods a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Floods"@en ;
+    rdfs:comment "Category representing Floods."@en .
+
+myonto:ForeignLanguageStudy a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Foreign Language Study"@en ;
+    rdfs:comment "Category representing Foreign Language Study."@en .
+
+myonto:France a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "France"@en ;
+    rdfs:comment "Category representing France."@en .
+
+myonto:Freewillanddeterminism a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Free will and determinism"@en ;
+    rdfs:comment "Category representing Free will and determinism."@en .
+
+myonto:Frontierandpioneerlife a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Frontier and pioneer life"@en ;
+    rdfs:comment "Category representing Frontier and pioneer life."@en .
+
+myonto:GamesAndActivities a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Games & Activities"@en ;
+    rdfs:comment "Category representing Games & Activities."@en .
+
+myonto:Geishas a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Geishas"@en ;
+    rdfs:comment "Category representing Geishas."@en .
+
+myonto:GreekdramaTragedy a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Greek drama (Tragedy)"@en ;
+    rdfs:comment "Category representing Greek drama (Tragedy)."@en .
+
+myonto:Groupreading a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Group reading"@en ;
+    rdfs:comment "Category representing Group reading."@en .
+
+myonto:GuitarmusicRock a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Guitar music (Rock)"@en ;
+    rdfs:comment "Category representing Guitar music (Rock)."@en .
+
+myonto:HealthAndFitness a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Health & Fitness"@en ;
+    rdfs:comment "Category representing Health & Fitness."@en .
+
+myonto:Highinterest-lowvocabularybooks a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "High interest-low vocabulary books"@en ;
+    rdfs:comment "Category representing High interest-low vocabulary books."@en .
+
+myonto:History a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "History"@en ;
+    rdfs:comment "Category representing History."@en .
+
+myonto:Horrortales a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Horror tales"@en ;
+    rdfs:comment "Category representing Horror tales."@en .
+
+myonto:Humor a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Humor"@en ;
+    rdfs:comment "Category representing Humor."@en .
+
+myonto:Inheritanceandsuccession a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Inheritance and succession"@en ;
+    rdfs:comment "Category representing Inheritance and succession."@en .
+
+myonto:Jews a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Jews"@en ;
+    rdfs:comment "Category representing Jews."@en .
+
+myonto:JuvenileFiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Juvenile Fiction"@en ;
+    rdfs:comment "Category representing Juvenile Fiction."@en .
+
+myonto:JuvenileNonfiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Juvenile Nonfiction"@en ;
+    rdfs:comment "Category representing Juvenile Nonfiction."@en .
+
+myonto:Knightsandknighthood a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Knights and knighthood"@en ;
+    rdfs:comment "Category representing Knights and knighthood."@en .
+
+myonto:LanguageArtsAndDisciplines a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Language Arts & Disciplines"@en ;
+    rdfs:comment "Category representing Language Arts & Disciplines."@en .
+
+myonto:Latitude a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Latitude"@en ;
+    rdfs:comment "Category representing Latitude."@en .
+
+myonto:Law a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Law"@en ;
+    rdfs:comment "Category representing Law."@en .
+
+myonto:Leadership a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Leadership"@en ;
+    rdfs:comment "Category representing Leadership."@en .
+
+myonto:LiteraryCollections a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Literary Collections"@en ;
+    rdfs:comment "Category representing Literary Collections."@en .
+
+myonto:LiteraryCriticism a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Literary Criticism"@en ;
+    rdfs:comment "Category representing Literary Criticism."@en .
+
+myonto:Love a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Love"@en ;
+    rdfs:comment "Category representing Love."@en .
+
+myonto:Lovestories a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Love stories"@en ;
+    rdfs:comment "Category representing Love stories."@en .
+
+myonto:Massachusetts a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Massachusetts"@en ;
+    rdfs:comment "Category representing Massachusetts."@en .
+
+myonto:Medical a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Medical"@en ;
+    rdfs:comment "Category representing Medical."@en .
+
+myonto:Militaryartandscience a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Military art and science"@en ;
+    rdfs:comment "Category representing Military art and science."@en .
+
+myonto:Motionpictureplays a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Motion picture plays"@en ;
+    rdfs:comment "Category representing Motion picture plays."@en .
+
+myonto:Music a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Music"@en ;
+    rdfs:comment "Category representing Music."@en .
+
+myonto:Nature a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Nature"@en ;
+    rdfs:comment "Category representing Nature."@en .
+
+myonto:Netherlands a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Netherlands"@en ;
+    rdfs:comment "Category representing Netherlands."@en .
+
+myonto:Novelists,American a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Novelists, American"@en ;
+    rdfs:comment "Category representing Novelists, American."@en .
+
+myonto:Novelists,Canadian a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Novelists, Canadian"@en ;
+    rdfs:comment "Category representing Novelists, Canadian."@en .
+
+myonto:Novelists,English a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Novelists, English"@en ;
+    rdfs:comment "Category representing Novelists, English."@en .
+
+myonto:Peoplewithsocialdisabilities a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "People with social disabilities"@en ;
+    rdfs:comment "Category representing People with social disabilities."@en .
+
+myonto:PerformingArts a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Performing Arts"@en ;
+    rdfs:comment "Category representing Performing Arts."@en .
+
+myonto:Pets a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Pets"@en ;
+    rdfs:comment "Category representing Pets."@en .
+
+myonto:Philosophy a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Philosophy"@en ;
+    rdfs:comment "Category representing Philosophy."@en .
+
+myonto:Photography a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Photography"@en ;
+    rdfs:comment "Category representing Photography."@en .
+
+myonto:Pigeons a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Pigeons"@en ;
+    rdfs:comment "Category representing Pigeons."@en .
+
+myonto:Poetry a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Poetry"@en ;
+    rdfs:comment "Category representing Poetry."@en .
+
+myonto:PoliticalScience a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Political Science"@en ;
+    rdfs:comment "Category representing Political Science."@en .
+
+myonto:PompeiiExtinctcity a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Pompeii (Extinct city)"@en ;
+    rdfs:comment "Category representing Pompeii (Extinct city)."@en .
+
+myonto:PrussiaGermany a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Prussia (Germany)"@en ;
+    rdfs:comment "Category representing Prussia (Germany)."@en .
+
+myonto:Psychology a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Psychology"@en ;
+    rdfs:comment "Category representing Psychology."@en .
+
+myonto:Reference a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Reference"@en ;
+    rdfs:comment "Category representing Reference."@en .
+
+myonto:Religion a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Religion"@en ;
+    rdfs:comment "Category representing Religion."@en .
+
+myonto:Russianliterature a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Russian literature"@en ;
+    rdfs:comment "Category representing Russian literature."@en .
+
+myonto:Sailing a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Sailing"@en ;
+    rdfs:comment "Category representing Sailing."@en .
+
+myonto:Science a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Science"@en ;
+    rdfs:comment "Category representing Science."@en .
+
+myonto:Self-Help a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Self-Help"@en ;
+    rdfs:comment "Category representing Self-Help."@en .
+
+myonto:Sex a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Sex"@en ;
+    rdfs:comment "Category representing Sex."@en .
+
+myonto:SocialScience a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Social Science"@en ;
+    rdfs:comment "Category representing Social Science."@en .
+
+myonto:Spanishlanguage a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Spanish language"@en ;
+    rdfs:comment "Category representing Spanish language."@en .
+
+myonto:SportsAndRecreation a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Sports & Recreation"@en ;
+    rdfs:comment "Category representing Sports & Recreation."@en .
+
+myonto:Storytelling a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Storytelling"@en ;
+    rdfs:comment "Category representing Storytelling."@en .
+
+myonto:TechnologyAndEngineering a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Technology & Engineering"@en ;
+    rdfs:comment "Category representing Technology & Engineering."@en .
+
+myonto:Texas a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Texas"@en ;
+    rdfs:comment "Category representing Texas."@en .
+
+myonto:Transportation a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Transportation"@en ;
+    rdfs:comment "Category representing Transportation."@en .
+
+myonto:Travel a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Travel"@en ;
+    rdfs:comment "Category representing Travel."@en .
+
+myonto:UnitedStates a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "United States"@en ;
+    rdfs:comment "Category representing United States."@en .
+
+myonto:YoungAdultFiction a owl:Class ;
+    rdfs:subClassOf myonto:Category ;
+    rdfs:label "Young Adult Fiction"@en ;
+    rdfs:comment "Category representing Young Adult Fiction."@en .
