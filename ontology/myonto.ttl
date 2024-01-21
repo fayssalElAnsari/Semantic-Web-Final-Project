@@ -41,6 +41,10 @@ myonto:Book a owl:Class;
     owl:hasKey ( myonto:hasIsbn10 myonto:hasIsbn13 );
     rdfs:label "A book"@en;
     rdfs:comment "Book"@en.
+	
+myonto:ElementsImportant a owl:Class;
+	rdfs:label "ImportantElement"@en;
+	rdfs:comment "An important element of a book".
 
 myonto:Author a owl:Class;
     owl:equivalentClass dbo:Author;
@@ -150,11 +154,22 @@ myonto:hasBook a owl:ObjectProperty;
 myonto:hasSameAuthor a owl:ObjectProperty,
     owl:TransitiveProperty,
     owl:SymmetricProperty;
-    owl:inverseOf myonto:hasAuthor;
+    
     rdfs:label "Author"@en ;
     rdfs:comment "The same author of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range myonto:Book .
+	
+myonto:Content a owl:ObjectProperty,
+	owl:inverseOf myonto:IsInBook;
+	rdfs:domain myonto:Book;
+	rdfs:range myonto:ElementsImportant.
+	
+myonto:IsInBook a owl:ObjectProperty,
+	owl:inverseOf myonto:Content;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:Book.
+	
 
 #########################################
 #       Disjointness
