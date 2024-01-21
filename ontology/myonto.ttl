@@ -141,6 +141,16 @@ myonto:hasPublisher a owl:ObjectProperty ;
     rdfs:comment "The publisher of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
+
+myonto:author a owl:ObjectProperty;
+	rdfs:range [
+        a owl:Class;
+        owl:unionOf (
+            xsd:string
+            myonto:ElementsImportant  
+        )
+    ];
+	rdfs:domain myonto:Book.
 #################################################################
 #       Annotation Properties
 #################################################################
@@ -198,8 +208,7 @@ myonto:IsInBook a owl:ObjectProperty;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:Book.
 	
-myonto:author a owl:ObjectProperty ;
-	owl:sameAs myonto:hasAuthor.
+
 
 myonto:present_in_work a owl:ObjectProperty;
 	owl:sameAs myonto:IsInBook.
@@ -250,7 +259,7 @@ myonto:spouse a owl:ObjectProperty;
 	owl:subClassOf myonto:relative;
 	rdfs:comment "spouse"@en;
 	rdfs:domain myonto:ElementsImportant;
-	rdfs:range myonto:Elements
+	rdfs:range myonto:Elements.
 	
 	
 myonto:partner a owl:ObjectProperty;
@@ -269,8 +278,8 @@ myonto:notable_work a owl:ObjectProperty;
 	
 myonto:MentionnedByAuthor a owl:ObjectProperty ; 
 	rdfs:domain myonto:ElementsImportant;
-	rdfs:range myonto:Author;
-	owl:propertyChainAxiom (myonto:IsInBook myonto:hasAuthor) .
+	
+	owl:propertyChainAxiom (myonto:IsInBook myonto:author) .
 
 
 #########################################
