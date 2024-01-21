@@ -33,7 +33,7 @@
         - [ ] owl:unionOf
         - [ ] owl:intersectionOf
         - [ ] owl:complementOf
-        - [ ] owl:disjointWith
+        - [x] owl:disjointWith
         - [x] owl:AllDisjointClasses
         - [ ] owl:disjointUnionOf
         - [x] owl:equivalentClass
