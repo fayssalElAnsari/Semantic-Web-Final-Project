@@ -30,12 +30,12 @@
         - [x] owl:FunctionalProperty
         - [x] owl:InverseFunctionalProperty
         - [x] owl:oneOf
-        - [x] owl:unionOf
+        - [ ] owl:unionOf
         - [x] owl:intersectionOf
         - [ ] owl:complementOf
         - [x] owl:disjointWith
         - [x] owl:AllDisjointClasses
-        - [ ] owl:disjointUnionOf
+        - [x] owl:disjointUnionOf
         - [x] owl:equivalentClass
         - [ ] owl:equivalentProperty
         INDIVIDUALS:
