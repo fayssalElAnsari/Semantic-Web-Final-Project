@@ -73,7 +73,7 @@
 
 - [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL. (Est ce qu'on peut utiliser protege pour faire ca automatiquement?)
 - [ ] ajouter des contraintes SHACL pour valider les donnees 
-- [ ] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
+- [x] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
 - [x] enrichir le graphe de connaissance (csv2rdf)
 - [x] relier les donnees locales avec les donnees externes 
     - [x] map isbn
