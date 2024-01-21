@@ -1,0 +1,857 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix myonto: <http://myonto.org/myonto_schema#>.
+@prefix skoslocal: <http://skoslocal.org/skoslocal_skos#> .
+    
+
+skoslocal:AchillesGreekmythology a myonto:Category ;
+    
+    skos:prefLabel "Achilles (Greek mythology)"@en ;
+    skos:note "Category representing Achilles (Greek mythology)."@en .
+
+skoslocal:Activityprogramsineducation a myonto:Category ;
+    
+    skos:prefLabel "Activity programs in education"@en ;
+    skos:note "Category representing Activity programs in education."@en .
+
+skoslocal:Adventure a myonto:Category ;
+    
+    skos:prefLabel "Adventure"@en ;
+    skos:note "Category representing Adventure."@en .
+
+skoslocal:Adventurestories a myonto:Category ;
+    
+    skos:prefLabel "Adventure stories"@en ;
+    skos:note "Category representing Adventure stories."@en .
+
+skoslocal:AeneasLegendarycharacter a myonto:Category ;
+    
+    skos:prefLabel "Aeneas (Legendary character)"@en ;
+    skos:note "Category representing Aeneas (Legendary character)."@en .
+
+skoslocal:Africa a myonto:Category ;
+    
+    skos:prefLabel "Africa"@en ;
+    skos:note "Category representing Africa."@en .
+
+skoslocal:AfricanAmericanfamilies a myonto:Category ;
+    
+    skos:prefLabel "African American families"@en ;
+    skos:note "Category representing African American families."@en .
+
+skoslocal:Agedwomen a myonto:Category ;
+    
+    skos:prefLabel "Aged women"@en ;
+    skos:note "Category representing Aged women."@en .
+
+skoslocal:Agriculture a myonto:Category ;
+    
+    skos:prefLabel "Agriculture"@en ;
+    skos:note "Category representing Agriculture."@en .
+
+skoslocal:Ahab,CaptainFictitiouscharacter a myonto:Category ;
+    
+    skos:prefLabel "Ahab, Captain (Fictitious character)"@en ;
+    skos:note "Category representing Ahab, Captain (Fictitious character)."@en .
+
+skoslocal:Alcoholics a myonto:Category ;
+    
+    skos:prefLabel "Alcoholics"@en ;
+    skos:note "Category representing Alcoholics."@en .
+
+skoslocal:Americandrama a myonto:Category ;
+    
+    skos:prefLabel "American drama"@en ;
+    skos:note "Category representing American drama."@en .
+
+skoslocal:Americanessays a myonto:Category ;
+    
+    skos:prefLabel "American essays"@en ;
+    skos:note "Category representing American essays."@en .
+
+skoslocal:Americanfiction a myonto:Category ;
+    
+    skos:prefLabel "American fiction"@en ;
+    skos:note "Category representing American fiction."@en .
+
+skoslocal:Americans a myonto:Category ;
+    
+    skos:prefLabel "Americans"@en ;
+    skos:note "Category representing Americans."@en .
+
+skoslocal:Animalsounds a myonto:Category ;
+    
+    skos:prefLabel "Animal sounds"@en ;
+    skos:note "Category representing Animal sounds."@en .
+
+skoslocal:Animals a myonto:Category ;
+    
+    skos:prefLabel "Animals"@en ;
+    skos:note "Category representing Animals."@en .
+
+skoslocal:Animatedfilms a myonto:Category ;
+    
+    skos:prefLabel "Animated films"@en ;
+    skos:note "Category representing Animated films."@en .
+
+skoslocal:Anti-Americanism a myonto:Category ;
+    
+    skos:prefLabel "Anti-Americanism"@en ;
+    skos:note "Category representing Anti-Americanism."@en .
+
+skoslocal:AntiquesAndCollectibles a myonto:Category ;
+    
+    skos:prefLabel "Antiques & Collectibles"@en ;
+    skos:note "Category representing Antiques & Collectibles."@en .
+
+skoslocal:Arabicliterature a myonto:Category ;
+    
+    skos:prefLabel "Arabic literature"@en ;
+    skos:note "Category representing Arabic literature."@en .
+
+skoslocal:Architecture a myonto:Category ;
+    
+    skos:prefLabel "Architecture"@en ;
+    skos:note "Category representing Architecture."@en .
+
+skoslocal:Armageddon a myonto:Category ;
+    
+    skos:prefLabel "Armageddon"@en ;
+    skos:note "Category representing Armageddon."@en .
+
+skoslocal:Art a myonto:Category ;
+    
+    skos:prefLabel "Art"@en ;
+    skos:note "Category representing Art."@en .
+
+skoslocal:Artmuseumcurators a myonto:Category ;
+    
+    skos:prefLabel "Art museum curators"@en ;
+    skos:note "Category representing Art museum curators."@en .
+
+skoslocal:Artificialintelligence a myonto:Category ;
+    
+    skos:prefLabel "Artificial intelligence"@en ;
+    skos:note "Category representing Artificial intelligence."@en .
+
+skoslocal:Artists'models a myonto:Category ;
+    
+    skos:prefLabel "Artists' models"@en ;
+    skos:note "Category representing Artists' models."@en .
+
+skoslocal:Asperger'ssyndrome a myonto:Category ;
+    
+    skos:prefLabel "Asperger's syndrome"@en ;
+    skos:note "Category representing Asperger's syndrome."@en .
+
+skoslocal:Astrophysics a myonto:Category ;
+    
+    skos:prefLabel "Astrophysics"@en ;
+    skos:note "Category representing Astrophysics."@en .
+
+skoslocal:AthensGreece a myonto:Category ;
+    
+    skos:prefLabel "Athens (Greece)"@en ;
+    skos:note "Category representing Athens (Greece)."@en .
+
+skoslocal:Atomicbomb a myonto:Category ;
+    
+    skos:prefLabel "Atomic bomb"@en ;
+    skos:note "Category representing Atomic bomb."@en .
+
+skoslocal:Aufsatzsammlung-Englisch-Massenmedien-Sprache a myonto:Category ;
+    
+    skos:prefLabel "Aufsatzsammlung - Englisch - Massenmedien - Sprache"@en ;
+    skos:note "Category representing Aufsatzsammlung - Englisch - Massenmedien - Sprache."@en .
+
+skoslocal:Australia a myonto:Category ;
+    
+    skos:prefLabel "Australia"@en ;
+    skos:note "Category representing Australia."@en .
+
+skoslocal:Authors,American a myonto:Category ;
+    
+    skos:prefLabel "Authors, American"@en ;
+    skos:note "Category representing Authors, American."@en .
+
+skoslocal:Authors,Arab a myonto:Category ;
+    
+    skos:prefLabel "Authors, Arab"@en ;
+    skos:note "Category representing Authors, Arab."@en .
+
+skoslocal:Authors,Chilean a myonto:Category ;
+    
+    skos:prefLabel "Authors, Chilean"@en ;
+    skos:note "Category representing Authors, Chilean."@en .
+
+skoslocal:Autobiographicalfiction a myonto:Category ;
+    
+    skos:prefLabel "Autobiographical fiction"@en ;
+    skos:note "Category representing Autobiographical fiction."@en .
+
+skoslocal:BUSINESSAndECONOMICS a myonto:Category ;
+    
+    skos:prefLabel "BUSINESS & ECONOMICS"@en ;
+    skos:note "Category representing BUSINESS & ECONOMICS."@en .
+
+skoslocal:Bacchantes a myonto:Category ;
+    
+    skos:prefLabel "Bacchantes"@en ;
+    skos:note "Category representing Bacchantes."@en .
+
+skoslocal:Ballet a myonto:Category ;
+    
+    skos:prefLabel "Ballet"@en ;
+    skos:note "Category representing Ballet."@en .
+
+skoslocal:Bankrobberies a myonto:Category ;
+    
+    skos:prefLabel "Bank robberies"@en ;
+    skos:note "Category representing Bank robberies."@en .
+
+skoslocal:Barmitzvah a myonto:Category ;
+    
+    skos:prefLabel "Bar mitzvah"@en ;
+    skos:note "Category representing Bar mitzvah."@en .
+
+skoslocal:Baseballplayers a myonto:Category ;
+    
+    skos:prefLabel "Baseball players"@en ;
+    skos:note "Category representing Baseball players."@en .
+
+skoslocal:Bereavement a myonto:Category ;
+    
+    skos:prefLabel "Bereavement"@en ;
+    skos:note "Category representing Bereavement."@en .
+
+skoslocal:Bestsellers a myonto:Category ;
+    
+    skos:prefLabel "Best sellers"@en ;
+    skos:note "Category representing Best sellers."@en .
+
+skoslocal:Bible a myonto:Category ;
+    
+    skos:prefLabel "Bible"@en ;
+    skos:note "Category representing Bible."@en .
+
+skoslocal:Bibleandevolution a myonto:Category ;
+    
+    skos:prefLabel "Bible and evolution"@en ;
+    skos:note "Category representing Bible and evolution."@en .
+
+skoslocal:Bildungsromans a myonto:Category ;
+    
+    skos:prefLabel "Bildungsromans"@en ;
+    skos:note "Category representing Bildungsromans."@en .
+
+skoslocal:Biographicalfiction a myonto:Category ;
+    
+    skos:prefLabel "Biographical fiction"@en ;
+    skos:note "Category representing Biographical fiction."@en .
+
+skoslocal:BiographyAndAutobiography a myonto:Category ;
+    
+    skos:prefLabel "Biography & Autobiography"@en ;
+    skos:note "Category representing Biography & Autobiography."@en .
+
+skoslocal:Boardingschools a myonto:Category ;
+    
+    skos:prefLabel "Boarding schools"@en ;
+    skos:note "Category representing Boarding schools."@en .
+
+skoslocal:Boatsandboating a myonto:Category ;
+    
+    skos:prefLabel "Boats and boating"@en ;
+    skos:note "Category representing Boats and boating."@en .
+
+skoslocal:Body,MindAndSpirit a myonto:Category ;
+    
+    skos:prefLabel "Body, Mind & Spirit"@en ;
+    skos:note "Category representing Body, Mind & Spirit."@en .
+
+skoslocal:Bond,JamesFictitiouscharacter a myonto:Category ;
+    
+    skos:prefLabel "Bond, James (Fictitious character)"@en ;
+    skos:note "Category representing Bond, James (Fictitious character)."@en .
+
+skoslocal:BosniaandHercegovina a myonto:Category ;
+    
+    skos:prefLabel "Bosnia and Hercegovina"@en ;
+    skos:note "Category representing Bosnia and Hercegovina."@en .
+
+skoslocal:BosniaandHerzegovina a myonto:Category ;
+    
+    skos:prefLabel "Bosnia and Herzegovina"@en ;
+    skos:note "Category representing Bosnia and Herzegovina."@en .
+
+skoslocal:Brain a myonto:Category ;
+    
+    skos:prefLabel "Brain"@en ;
+    skos:note "Category representing Brain."@en .
+
+skoslocal:British a myonto:Category ;
+    
+    skos:prefLabel "British"@en ;
+    skos:note "Category representing British."@en .
+
+skoslocal:BusinessAndEconomics a myonto:Category ;
+    
+    skos:prefLabel "Business & Economics"@en ;
+    skos:note "Category representing Business & Economics."@en .
+
+skoslocal:Businessplanning a myonto:Category ;
+    
+    skos:prefLabel "Business planning"@en ;
+    skos:note "Category representing Business planning."@en .
+
+skoslocal:Capitalistsandfinanciers a myonto:Category ;
+    
+    skos:prefLabel "Capitalists and financiers"@en ;
+    skos:note "Category representing Capitalists and financiers."@en .
+
+skoslocal:Cardsharping a myonto:Category ;
+    
+    skos:prefLabel "Cardsharping"@en ;
+    skos:note "Category representing Cardsharping."@en .
+
+skoslocal:Children'spoetry,English a myonto:Category ;
+    
+    skos:prefLabel "Children's poetry, English"@en ;
+    skos:note "Category representing Children's poetry, English."@en .
+
+skoslocal:Children'sstories a myonto:Category ;
+    
+    skos:prefLabel "Children's stories"@en ;
+    skos:note "Category representing Children's stories."@en .
+
+skoslocal:Christianfiction a myonto:Category ;
+    
+    skos:prefLabel "Christian fiction"@en ;
+    skos:note "Category representing Christian fiction."@en .
+
+skoslocal:Christianlife a myonto:Category ;
+    
+    skos:prefLabel "Christian life"@en ;
+    skos:note "Category representing Christian life."@en .
+
+skoslocal:Christianpilgrimsandpilgrimages a myonto:Category ;
+    
+    skos:prefLabel "Christian pilgrims and pilgrimages"@en ;
+    skos:note "Category representing Christian pilgrims and pilgrimages."@en .
+
+skoslocal:Christmasstories a myonto:Category ;
+    
+    skos:prefLabel "Christmas stories"@en ;
+    skos:note "Category representing Christmas stories."@en .
+
+skoslocal:Churchworkwiththepoor a myonto:Category ;
+    
+    skos:prefLabel "Church work with the poor"@en ;
+    skos:note "Category representing Church work with the poor."@en .
+
+skoslocal:Civilization a myonto:Category ;
+    
+    skos:prefLabel "Civilization"@en ;
+    skos:note "Category representing Civilization."@en .
+
+skoslocal:Classicliterature a myonto:Category ;
+    
+    skos:prefLabel "Classic literature"@en ;
+    skos:note "Category representing Classic literature."@en .
+
+skoslocal:CliffsNotes a myonto:Category ;
+    
+    skos:prefLabel "Cliffs Notes"@en ;
+    skos:note "Category representing Cliffs Notes."@en .
+
+skoslocal:Cliffsnotes a myonto:Category ;
+    
+    skos:prefLabel "Cliffs notes"@en ;
+    skos:note "Category representing Cliffs notes."@en .
+
+skoslocal:Colombia a myonto:Category ;
+    
+    skos:prefLabel "Colombia"@en ;
+    skos:note "Category representing Colombia."@en .
+
+skoslocal:ComicsAndGraphicNovels a myonto:Category ;
+    
+    skos:prefLabel "Comics & Graphic Novels"@en ;
+    skos:note "Category representing Comics & Graphic Novels."@en .
+
+skoslocal:Compulsiveeating a myonto:Category ;
+    
+    skos:prefLabel "Compulsive eating"@en ;
+    skos:note "Category representing Compulsive eating."@en .
+
+skoslocal:Computers a myonto:Category ;
+    
+    skos:prefLabel "Computers"@en ;
+    skos:note "Category representing Computers."@en .
+
+skoslocal:Conciousness a myonto:Category ;
+    
+    skos:prefLabel "Conciousness"@en ;
+    skos:note "Category representing Conciousness."@en .
+
+skoslocal:Cookery,French a myonto:Category ;
+    
+    skos:prefLabel "Cookery, French"@en ;
+    skos:note "Category representing Cookery, French."@en .
+
+skoslocal:Cooking a myonto:Category ;
+    
+    skos:prefLabel "Cooking"@en ;
+    skos:note "Category representing Cooking."@en .
+
+skoslocal:Cooking,Italian a myonto:Category ;
+    
+    skos:prefLabel "Cooking, Italian"@en ;
+    skos:note "Category representing Cooking, Italian."@en .
+
+skoslocal:Courtship a myonto:Category ;
+    
+    skos:prefLabel "Courtship"@en ;
+    skos:note "Category representing Courtship."@en .
+
+skoslocal:CraftsAndHobbies a myonto:Category ;
+    
+    skos:prefLabel "Crafts & Hobbies"@en ;
+    skos:note "Category representing Crafts & Hobbies."@en .
+
+skoslocal:DatingSocialcustoms a myonto:Category ;
+    
+    skos:prefLabel "Dating (Social customs)"@en ;
+    skos:note "Category representing Dating (Social customs)."@en .
+
+skoslocal:Death a myonto:Category ;
+    
+    skos:prefLabel "Death"@en ;
+    skos:note "Category representing Death."@en .
+
+skoslocal:Dent,ArthurFictitiouscharacter a myonto:Category ;
+    
+    skos:prefLabel "Dent, Arthur (Fictitious character)"@en ;
+    skos:note "Category representing Dent, Arthur (Fictitious character)."@en .
+
+skoslocal:Depressions a myonto:Category ;
+    
+    skos:prefLabel "Depressions"@en ;
+    skos:note "Category representing Depressions."@en .
+
+skoslocal:Derivativesecurities a myonto:Category ;
+    
+    skos:prefLabel "Derivative securities"@en ;
+    skos:note "Category representing Derivative securities."@en .
+
+skoslocal:Detectiveandmysterystories a myonto:Category ;
+    
+    skos:prefLabel "Detective and mystery stories"@en ;
+    skos:note "Category representing Detective and mystery stories."@en .
+
+skoslocal:Domesticfiction a myonto:Category ;
+    
+    skos:prefLabel "Domestic fiction"@en ;
+    skos:note "Category representing Domestic fiction."@en .
+
+skoslocal:Drama a myonto:Category ;
+    
+    skos:prefLabel "Drama"@en ;
+    skos:note "Category representing Drama."@en .
+
+skoslocal:Dramaingl�s a myonto:Category ;
+    
+    skos:prefLabel "Drama ingl�s"@en ;
+    skos:note "Category representing Drama ingl�s."@en .
+
+skoslocal:Dramatists a myonto:Category ;
+    
+    skos:prefLabel "Dramatists"@en ;
+    skos:note "Category representing Dramatists."@en .
+
+skoslocal:DuneImaginaryplace a myonto:Category ;
+    
+    skos:prefLabel "Dune (Imaginary place)"@en ;
+    skos:note "Category representing Dune (Imaginary place)."@en .
+
+skoslocal:Education a myonto:Category ;
+    
+    skos:prefLabel "Education"@en ;
+    skos:note "Category representing Education."@en .
+
+skoslocal:Educationaltestsandmeasurements a myonto:Category ;
+    
+    skos:prefLabel "Educational tests and measurements"@en ;
+    skos:note "Category representing Educational tests and measurements."@en .
+
+skoslocal:Egypt a myonto:Category ;
+    
+    skos:prefLabel "Egypt"@en ;
+    skos:note "Category representing Egypt."@en .
+
+skoslocal:England a myonto:Category ;
+    
+    skos:prefLabel "England"@en ;
+    skos:note "Category representing England."@en .
+
+skoslocal:Englishfiction a myonto:Category ;
+    
+    skos:prefLabel "English fiction"@en ;
+    skos:note "Category representing English fiction."@en .
+
+skoslocal:Fables,Latin a myonto:Category ;
+    
+    skos:prefLabel "Fables, Latin"@en ;
+    skos:note "Category representing Fables, Latin."@en .
+
+skoslocal:FamilyAndRelationships a myonto:Category ;
+    
+    skos:prefLabel "Family & Relationships"@en ;
+    skos:note "Category representing Family & Relationships."@en .
+
+skoslocal:Fiction a myonto:Category ;
+    
+    skos:prefLabel "Fiction"@en ;
+    skos:note "Category representing Fiction."@en .
+
+skoslocal:Floods a myonto:Category ;
+    
+    skos:prefLabel "Floods"@en ;
+    skos:note "Category representing Floods."@en .
+
+skoslocal:ForeignLanguageStudy a myonto:Category ;
+    
+    skos:prefLabel "Foreign Language Study"@en ;
+    skos:note "Category representing Foreign Language Study."@en .
+
+skoslocal:France a myonto:Category ;
+    
+    skos:prefLabel "France"@en ;
+    skos:note "Category representing France."@en .
+
+skoslocal:Freewillanddeterminism a myonto:Category ;
+    
+    skos:prefLabel "Free will and determinism"@en ;
+    skos:note "Category representing Free will and determinism."@en .
+
+skoslocal:Frontierandpioneerlife a myonto:Category ;
+    
+    skos:prefLabel "Frontier and pioneer life"@en ;
+    skos:note "Category representing Frontier and pioneer life."@en .
+
+skoslocal:GamesAndActivities a myonto:Category ;
+    
+    skos:prefLabel "Games & Activities"@en ;
+    skos:note "Category representing Games & Activities."@en .
+
+skoslocal:Geishas a myonto:Category ;
+    
+    skos:prefLabel "Geishas"@en ;
+    skos:note "Category representing Geishas."@en .
+
+skoslocal:GreekdramaTragedy a myonto:Category ;
+    
+    skos:prefLabel "Greek drama (Tragedy)"@en ;
+    skos:note "Category representing Greek drama (Tragedy)."@en .
+
+skoslocal:Groupreading a myonto:Category ;
+    
+    skos:prefLabel "Group reading"@en ;
+    skos:note "Category representing Group reading."@en .
+
+skoslocal:GuitarmusicRock a myonto:Category ;
+    
+    skos:prefLabel "Guitar music (Rock)"@en ;
+    skos:note "Category representing Guitar music (Rock)."@en .
+
+skoslocal:HealthAndFitness a myonto:Category ;
+    
+    skos:prefLabel "Health & Fitness"@en ;
+    skos:note "Category representing Health & Fitness."@en .
+
+skoslocal:Highinterest-lowvocabularybooks a myonto:Category ;
+    
+    skos:prefLabel "High interest-low vocabulary books"@en ;
+    skos:note "Category representing High interest-low vocabulary books."@en .
+
+skoslocal:History a myonto:Category ;
+    
+    skos:prefLabel "History"@en ;
+    skos:note "Category representing History."@en .
+
+skoslocal:Horrortales a myonto:Category ;
+    
+    skos:prefLabel "Horror tales"@en ;
+    skos:note "Category representing Horror tales."@en .
+
+skoslocal:Humor a myonto:Category ;
+    
+    skos:prefLabel "Humor"@en ;
+    skos:note "Category representing Humor."@en .
+
+skoslocal:Inheritanceandsuccession a myonto:Category ;
+    
+    skos:prefLabel "Inheritance and succession"@en ;
+    skos:note "Category representing Inheritance and succession."@en .
+
+skoslocal:Jews a myonto:Category ;
+    
+    skos:prefLabel "Jews"@en ;
+    skos:note "Category representing Jews."@en .
+
+skoslocal:JuvenileFiction a myonto:Category ;
+    owl:equivalentClass [
+        owl:intersectionOf (skoslocal:Juvenile skoslocal:Fiction)
+    ];
+    
+    skos:prefLabel "Juvenile Fiction"@en ;
+    skos:note "Category representing Juvenile Fiction."@en ;
+    owl:disjointWith skoslocal:JuvenileNonfiction .
+
+skoslocal:JuvenileNonfiction a myonto:Category ;
+    
+    skos:prefLabel "Juvenile Nonfiction"@en ;
+    skos:note "Category representing Juvenile Nonfiction."@en ;
+    owl:disjointWith skoslocal:JuvenileFiction .
+
+skoslocal:Knightsandknighthood a myonto:Category ;
+    
+    skos:prefLabel "Knights and knighthood"@en ;
+    skos:note "Category representing Knights and knighthood."@en .
+
+skoslocal:LanguageArtsAndDisciplines a myonto:Category ;
+    
+    skos:prefLabel "Language Arts & Disciplines"@en ;
+    skos:note "Category representing Language Arts & Disciplines."@en .
+
+skoslocal:Latitude a myonto:Category ;
+    
+    skos:prefLabel "Latitude"@en ;
+    skos:note "Category representing Latitude."@en .
+
+skoslocal:Law a myonto:Category ;
+    
+    skos:prefLabel "Law"@en ;
+    skos:note "Category representing Law."@en .
+
+skoslocal:Leadership a myonto:Category ;
+    
+    skos:prefLabel "Leadership"@en ;
+    skos:note "Category representing Leadership."@en .
+
+skoslocal:LiteraryCollections a myonto:Category ;
+    
+    skos:prefLabel "Literary Collections"@en ;
+    skos:note "Category representing Literary Collections."@en .
+
+skoslocal:LiteraryCriticism a myonto:Category ;
+    
+    skos:prefLabel "Literary Criticism"@en ;
+    skos:note "Category representing Literary Criticism."@en .
+
+skoslocal:Love a myonto:Category ;
+    
+    skos:prefLabel "Love"@en ;
+    skos:note "Category representing Love."@en .
+
+skoslocal:Lovestories a myonto:Category ;
+    
+    skos:prefLabel "Love stories"@en ;
+    skos:note "Category representing Love stories."@en .
+
+skoslocal:Massachusetts a myonto:Category ;
+    
+    skos:prefLabel "Massachusetts"@en ;
+    skos:note "Category representing Massachusetts."@en .
+
+skoslocal:Medical a myonto:Category ;
+    
+    skos:prefLabel "Medical"@en ;
+    skos:note "Category representing Medical."@en .
+
+skoslocal:Militaryartandscience a myonto:Category ;
+    
+    skos:prefLabel "Military art and science"@en ;
+    skos:note "Category representing Military art and science."@en .
+
+skoslocal:Motionpictureplays a myonto:Category ;
+    
+    skos:prefLabel "Motion picture plays"@en ;
+    skos:note "Category representing Motion picture plays."@en .
+
+skoslocal:Music a myonto:Category ;
+    
+    skos:prefLabel "Music"@en ;
+    skos:note "Category representing Music."@en .
+
+skoslocal:Nature a myonto:Category ;
+    
+    skos:prefLabel "Nature"@en ;
+    skos:note "Category representing Nature."@en .
+
+skoslocal:Netherlands a myonto:Category ;
+    
+    skos:prefLabel "Netherlands"@en ;
+    skos:note "Category representing Netherlands."@en .
+
+skoslocal:Novelists,American a myonto:Category ;
+    
+    skos:prefLabel "Novelists, American"@en ;
+    skos:note "Category representing Novelists, American."@en .
+
+skoslocal:Novelists,Canadian a myonto:Category ;
+    
+    skos:prefLabel "Novelists, Canadian"@en ;
+    skos:note "Category representing Novelists, Canadian."@en .
+
+skoslocal:Novelists,English a myonto:Category ;
+    
+    skos:prefLabel "Novelists, English"@en ;
+    skos:note "Category representing Novelists, English."@en .
+
+skoslocal:Peoplewithsocialdisabilities a myonto:Category ;
+    
+    skos:prefLabel "People with social disabilities"@en ;
+    skos:note "Category representing People with social disabilities."@en .
+
+skoslocal:PerformingArts a myonto:Category ;
+    
+    skos:prefLabel "Performing Arts"@en ;
+    skos:note "Category representing Performing Arts."@en .
+
+skoslocal:Pets a myonto:Category ;
+    
+    skos:prefLabel "Pets"@en ;
+    skos:note "Category representing Pets."@en .
+
+skoslocal:Philosophy a myonto:Category ;
+    
+    skos:prefLabel "Philosophy"@en ;
+    skos:note "Category representing Philosophy."@en .
+
+skoslocal:Photography a myonto:Category ;
+    
+    skos:prefLabel "Photography"@en ;
+    skos:note "Category representing Photography."@en .
+
+skoslocal:Pigeons a myonto:Category ;
+    
+    skos:prefLabel "Pigeons"@en ;
+    skos:note "Category representing Pigeons."@en .
+
+skoslocal:Poetry a myonto:Category ;
+    
+    skos:prefLabel "Poetry"@en ;
+    skos:note "Category representing Poetry."@en .
+
+skoslocal:PoliticalScience a myonto:Category ;
+    
+    skos:prefLabel "Political Science"@en ;
+    skos:note "Category representing Political Science."@en .
+
+skoslocal:PompeiiExtinctcity a myonto:Category ;
+    
+    skos:prefLabel "Pompeii (Extinct city)"@en ;
+    skos:note "Category representing Pompeii (Extinct city)."@en .
+
+skoslocal:PrussiaGermany a myonto:Category ;
+    
+    skos:prefLabel "Prussia (Germany)"@en ;
+    skos:note "Category representing Prussia (Germany)."@en .
+
+skoslocal:Psychology a myonto:Category ;
+    
+    skos:prefLabel "Psychology"@en ;
+    skos:note "Category representing Psychology."@en .
+
+skoslocal:Reference a myonto:Category ;
+    
+    skos:prefLabel "Reference"@en ;
+    skos:note "Category representing Reference."@en .
+
+skoslocal:Religion a myonto:Category ;
+    
+    skos:prefLabel "Religion"@en ;
+    skos:note "Category representing Religion."@en .
+
+skoslocal:Russianliterature a myonto:Category ;
+    
+    skos:prefLabel "Russian literature"@en ;
+    skos:note "Category representing Russian literature."@en .
+
+skoslocal:Sailing a myonto:Category ;
+    
+    skos:prefLabel "Sailing"@en ;
+    skos:note "Category representing Sailing."@en .
+
+skoslocal:Science a myonto:Category ;
+    
+    skos:prefLabel "Science"@en ;
+    skos:note "Category representing Science."@en .
+
+skoslocal:Self-Help a myonto:Category ;
+    
+    skos:prefLabel "Self-Help"@en ;
+    skos:note "Category representing Self-Help."@en .
+
+skoslocal:Sex a myonto:Category ;
+    
+    skos:prefLabel "Sex"@en ;
+    skos:note "Category representing Sex."@en .
+
+skoslocal:SocialScience a myonto:Category ;
+    
+    skos:prefLabel "Social Science"@en ;
+    skos:note "Category representing Social Science."@en .
+
+skoslocal:Spanishlanguage a myonto:Category ;
+    
+    skos:prefLabel "Spanish language"@en ;
+    skos:note "Category representing Spanish language."@en .
+
+skoslocal:SportsAndRecreation a myonto:Category ;
+    
+    skos:prefLabel "Sports & Recreation"@en ;
+    skos:note "Category representing Sports & Recreation."@en .
+
+skoslocal:Storytelling a myonto:Category ;
+    
+    skos:prefLabel "Storytelling"@en ;
+    skos:note "Category representing Storytelling."@en .
+
+skoslocal:TechnologyAndEngineering a myonto:Category ;
+    
+    skos:prefLabel "Technology & Engineering"@en ;
+    skos:note "Category representing Technology & Engineering."@en .
+
+skoslocal:Texas a myonto:Category ;
+    
+    skos:prefLabel "Texas"@en ;
+    skos:note "Category representing Texas."@en .
+
+skoslocal:Transportation a myonto:Category ;
+    
+    skos:prefLabel "Transportation"@en ;
+    skos:note "Category representing Transportation."@en .
+
+skoslocal:Travel a myonto:Category ;
+    
+    skos:prefLabel "Travel"@en ;
+    skos:note "Category representing Travel."@en .
+
+skoslocal:UnitedStates a myonto:Category ;
+    
+    skos:prefLabel "United States"@en ;
+    skos:note "Category representing United States."@en .
+
+skoslocal:YoungAdultFiction a myonto:Category ;
+    
+    skos:prefLabel "Young Adult Fiction"@en ;
+    skos:note "Category representing Young Adult Fiction."@en .

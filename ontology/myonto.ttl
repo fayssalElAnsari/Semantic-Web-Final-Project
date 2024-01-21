@@ -57,6 +57,7 @@ myonto:PrintType a owl:Class;
     rdfs:comment "PrintType"@en.
 
 myonto:Category a owl:Class;
+	rdfs:subClassOf skos:Concept.
     owl:equivalentClass dbo:Category;
     rdfs:label "A category"@en;
     rdfs:comment "Category"@en.
