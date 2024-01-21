@@ -45,7 +45,7 @@ myonto:Book a owl:Class;
 
 myonto:Magazine a owl:class;
 	rdfs:comment "a Magazine";	
-	owl:priorVersion myonto:Magazine;
+	owl:priorVersion myonto:MagazineType;
 	owl:disjointWith myonto:Book .
 	
 myonto:ElementsImportant a owl:Class;
@@ -84,8 +84,9 @@ myonto:BookType a owl:Class;
     rdfs:label "Book Type"@en.
 	
 
-myonto:MagazineType a owl:Class;
+myonto:MagazineType a owl:DeprecatedClass;
     rdfs:subClassOf myonto:PrintType ;
+	
     rdfs:label "Magazine Type"@en.
 	
 
@@ -107,6 +108,12 @@ myonto:description a owl:DatatypeProperty ;
 
 myonto:publishedDate a owl:DatatypeProperty ;
     rdfs:label "Date of publication"@en ;
+    rdfs:comment "The publication date"@en ;
+    rdfs:domain myonto:Book ;
+    rdfs:range xsd:string .
+	
+myonto:Date a owl:DeprecatedProperty;
+	rdfs:label "Date of publication"@en ;
     rdfs:comment "The publication date"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .

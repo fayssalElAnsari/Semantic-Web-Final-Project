@@ -37,22 +37,22 @@
         - [x] owl:AllDisjointClasses
         - [x] owl:disjointUnionOf
         - [x] owl:equivalentClass
-        - [ ] owl:equivalentProperty
+        - [x] owl:equivalentProperty
         INDIVIDUALS:
         - [x] owl:sameAs
         - [ ] owl:differentFrom
         - [x] owl:hasKey
-        - [ ] owl:onProperty
+        - [x] owl:onProperty
         - [ ] owl:allValuesFrom
         - [ ] owl:someValuesFrom
         - [ ] owl:hasValue
         - [ ] owl:hasSelf
-        - [ ] owl:maxCardinality
+        - [x] owl:maxCardinality
         - [ ] owl:qualifiedCardinality
-        - [ ] owl:priorVersion
+        - [x] owl:priorVersion
         - [ ] owl:imports
-        - [ ] owl:DeprecatedProperty
-        - [ ] owl:DeprecatedClass
+        - [x] owl:DeprecatedProperty
+        - [x] owl:DeprecatedClass
 
     - [ ] SHACL
         - [x] sh:NodeShape
