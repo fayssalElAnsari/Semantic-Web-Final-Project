@@ -16,6 +16,7 @@
 #       CLASSES
 #########################################
 myonto:Publication a owl:Class;
+	owl:disjointUnionOf ( myonto:Book myonto:Magazine ) 
     owl:equivalentClass dbo:Publication;
     rdfs:label "Publication"@en;
     rdfs:comment "A publication"@en.
@@ -59,7 +60,7 @@ myonto:AuthorAndProtagonist a owl:Class;
 	owl:equivalentClass [
         owl:intersectionOf (myonto:Author myonto:ElementsImportant)
     ].
-	
+
 myonto:PrintType a owl:Class;
     # owl:equivalentClass dbo:PrintType;
     rdfs:label "PrintType of a publication"@en;
