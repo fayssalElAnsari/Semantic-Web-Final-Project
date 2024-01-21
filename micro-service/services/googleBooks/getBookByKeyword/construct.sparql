@@ -1,6 +1,7 @@
 
 @prefix myonto: <http://myonto.org/myonto_schema/>
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix skoslocal: <http://skoslocal.org/skoslocal_skos#>
 CONSTRUCT {
     ?bookUri rdf:type ?type;
         myonto:name ?title;
@@ -138,7 +139,7 @@ VALUES (?categoryLabel ?categoryUri) {
     ("inheritance and succession" myonto:Inheritanceandsuccession)
     ("jews" myonto:Jews)
     ("juvenile fiction" myonto:JuvenileFiction)
-    ("juvenile nonfiction" myonto:JuvenileNonfiction)
+    ("juvenile nonfiction" skoslocal:JuvenileNonfiction)
     ("knights and knighthood" myonto:Knightsandknighthood)
     ("language arts and disciplines" myonto:LanguageArtsAndDisciplines)
     ("latitude" myonto:Latitude)
