@@ -607,19 +607,16 @@ skoslocal:Jews a myonto:Category ;
     skos:note "Category representing Jews."@en .
 
 skoslocal:JuvenileFiction a myonto:Category ;
-    owl:equivalentClass [
-        owl:intersectionOf (skoslocal:Juvenile skoslocal:Fiction)
-    ];
     
     skos:prefLabel "Juvenile Fiction"@en ;
     skos:note "Category representing Juvenile Fiction."@en ;
-    owl:disjointWith skoslocal:JuvenileNonfiction .
+    
 
 skoslocal:JuvenileNonfiction a myonto:Category ;
     
     skos:prefLabel "Juvenile Nonfiction"@en ;
     skos:note "Category representing Juvenile Nonfiction."@en ;
-    owl:disjointWith skoslocal:JuvenileFiction .
+    
 
 skoslocal:Knightsandknighthood a myonto:Category ;
     

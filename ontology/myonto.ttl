@@ -41,16 +41,25 @@ myonto:Book a owl:Class;
     owl:hasKey ( myonto:hasIsbn10 myonto:hasIsbn13 );
     rdfs:label "A book"@en;
     rdfs:comment "Book"@en.
+
+myonto:Magazine a owl:class;
+,	rdfs:comment "a Magazine";	
+	owl:disjointWith myonto:Book .
 	
 myonto:ElementsImportant a owl:Class;
 	rdfs:label "ImportantElement"@en;
-	rdfs:comment "An important element of a book".
+	rdfs:comment "A relevant element of a book".
 
 myonto:Author a owl:Class;
     owl:equivalentClass dbo:Author;
     rdfs:label "An author"@en;
     rdfs:comment "Author"@en.
-    
+ 
+myonto:AuthorAndProtagonist a owl:Class;
+	owl:equivalentClass [
+        owl:intersectionOf (myonto:Author myonto:ElementsImportant)
+    ];
+	
 myonto:PrintType a owl:Class;
     # owl:equivalentClass dbo:PrintType;
     rdfs:label "PrintType of a publication"@en;
@@ -65,11 +74,15 @@ myonto:Category a owl:Class;
 myonto:BookType a owl:Class;
     rdfs:subClassOf myonto:PrintType ;
     rdfs:label "Book Type"@en.
+	
 
 myonto:MagazineType a owl:Class;
     rdfs:subClassOf myonto:PrintType ;
     rdfs:label "Magazine Type"@en.
-
+	
+myonto:Publisher a owl:Class;
+	rdfs:label "publisher"@en;
+	rdfs:comment "A publisher"@en.
 
 #################################################################
 #       Data Type Properties
@@ -183,7 +196,8 @@ myonto:has_part a owl:ObjectProperty;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:Book.
 
-myonto:subclass_of a owl:ObjectProperty;
+myonto:subclass_of a owl:AsymmetricProperty;
+	rdf:type owl:TransitiveProperty ;
 	rdfs:comment "subclass of another element"@en;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
@@ -199,15 +213,22 @@ myonto:relative a owl:ObjectProperty;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 
-myonto:father a owl:ObjectProperty;
-	owl:subClassOf myonto:relative;
-	owl:inverseOf myonto:son;
-	rdfs:comment "father of an elements"@en;
+mynto:parent a owl:AsymmetricProperty;
+	owl:subClassOf myonto:relative;	
+	owl:inverseOf myonto:Enfant;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 	
-myonto:son a owl:ObjectProperty;
+myonto:father a owl:AsymmetricProperty;
+	owl:subClassOf myonto:relative;	
+	rdfs:comment "father of an elements"@en.
+
+myonto:Enfant a owl:AsymmetricProperty;
+	owl:inverseOf myonto:parent;
 	owl:subClassOf myonto:relative.
+	
+myonto:son a owl:AsymmetricProperty;
+	owl:subClassOf myonto:Enfant.
 
 myonto:spouse a owl:ObjectProperty;
 	owl:subClassOf myonto:relative;
