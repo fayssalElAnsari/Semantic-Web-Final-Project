@@ -20,17 +20,17 @@
         - [x] owl:DatatypeProperty
         - [x] owl:AnnotationProperty
         - [x] owl:SymmetricProperty
-        - [ ] owl:AsymmetricProperty
+        - [x] owl:AsymmetricProperty
         - [x] owl:inverseOf
-        - [ ] owl:TransitiveProperty
-        - [ ] owl:propertyDisjointWith
+        - [x] owl:TransitiveProperty
+        - [x] owl:propertyDisjointWith
         - [ ] owl:ReflexiveProperty
-        - [ ] owl:IrreflexiveProperty
-        - [ ] owl:propertyChainAxiom
+        - [x] owl:IrreflexiveProperty
+        - [x] owl:propertyChainAxiom
         - [x] owl:FunctionalProperty
-        - [ ] owl:InverseFunctionalProperty
+        - [x] owl:InverseFunctionalProperty
         - [x] owl:oneOf
-        - [ ] owl:unionOf
+        - [x] owl:unionOf
         - [x] owl:intersectionOf
         - [ ] owl:complementOf
         - [x] owl:disjointWith
@@ -39,7 +39,7 @@
         - [x] owl:equivalentClass
         - [ ] owl:equivalentProperty
         INDIVIDUALS:
-        - [ ] owl:sameAs
+        - [x] owl:sameAs
         - [ ] owl:differentFrom
         - [x] owl:hasKey
         - [ ] owl:onProperty

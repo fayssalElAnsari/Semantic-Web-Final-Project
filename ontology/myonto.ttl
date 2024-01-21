@@ -59,6 +59,9 @@ myonto:AuthorAndProtagonist a owl:Class;
 	owl:equivalentClass [
         owl:intersectionOf (myonto:Author myonto:ElementsImportant)
     ];
+
+myonto:ResponsableOeuvre rdf:type owl:Class ;
+	owl:unionOf ( myonto:Person :Group ) 
 	
 myonto:PrintType a owl:Class;
     # owl:equivalentClass dbo:PrintType;
@@ -80,9 +83,7 @@ myonto:MagazineType a owl:Class;
     rdfs:subClassOf myonto:PrintType ;
     rdfs:label "Magazine Type"@en.
 	
-myonto:Publisher a owl:Class;
-	rdfs:label "publisher"@en;
-	rdfs:comment "A publisher"@en.
+
 
 #################################################################
 #       Data Type Properties
@@ -111,18 +112,23 @@ myonto:language a owl:DatatypeProperty ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:string .
 
-myonto:hasIsbn10 a owl:DatatypeProperty ;
+myonto:hasIsbn10 a owl:InverseFunctionalProperty ;
     rdfs:label "isbn10"@en ;
     rdfs:comment "The isbn10 of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:decimal .
 
-myonto:hasIsbn13 a owl:DatatypeProperty ;
+myonto:hasIsbn13 a owl:InverseFunctionalProperty ;
     rdfs:label "isbn13"@en ;
     rdfs:comment "The isbn13 of a book"@en ;
     rdfs:domain myonto:Book ;
     rdfs:range xsd:decimal .
 
+myonto:hasPublisher a owl:ObjectProperty ;
+    rdfs:label "Book Publisher"@en ;
+    rdfs:comment "The publisher of a book"@en ;
+    rdfs:domain myonto:Book ;
+    rdfs:range xsd:string .
 #################################################################
 #       Annotation Properties
 #################################################################
@@ -134,11 +140,7 @@ myonto:googleBookLink a owl:AnnotationProperty;
 #################################################################
 #       Object Properties
 #################################################################
-myonto:hasPublisher a owl:ObjectProperty ;
-    rdfs:label "Book Publisher"@en ;
-    rdfs:comment "The publisher of a book"@en ;
-    rdfs:domain myonto:Book ;
-    rdfs:range myonto:Publihser .
+
 
 myonto:hasPrintType a owl:ObjectProperty, owl:FunctionalProperty;
     rdfs:label "Print type"@en ;
@@ -202,24 +204,27 @@ myonto:subclass_of a owl:AsymmetricProperty;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 	
-myonto:educated_at a owl:ObjectProperty;
+myonto:educated_at a owl:IrreflexiveProperty ;
 	rdfs:comment "where the personnage got educated"@en;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 
 myonto:relative a owl:ObjectProperty;
+	
 	owl:SymmetricProperty;
 	rdfs:comment "relative of an element"@en;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 
 mynto:parent a owl:AsymmetricProperty;
+	owl:propertyDisjointWith myonto:Enfant;
 	owl:subClassOf myonto:relative;	
 	owl:inverseOf myonto:Enfant;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 	
 myonto:father a owl:AsymmetricProperty;
+	
 	owl:subClassOf myonto:relative;	
 	rdfs:comment "father of an elements"@en.
 
@@ -246,6 +251,12 @@ myonto:residence a owl:ObjectProperty;
 myonto:notable_work a owl:ObjectProperty;
 	owl:subClassOf myonto:hasBook;
 	rdfs:comment "the notable work of an author"@en.
+	
+myonto:MentionnedByAuthor a owl:ObjectProperty ; 
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:Author;
+	owl:propertyChainAxiom (myonto:IsInBook myonto:hasAuthor) .
+
 
 #########################################
 #       Disjointness
