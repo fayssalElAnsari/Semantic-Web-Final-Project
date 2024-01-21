@@ -1,4 +1,4 @@
-@prefix ns1: <http://myonto.org/myonto_schema/> .
+@prefix ns1: <http://myonto.org/myonto_schema#> .
 
 <http://texteToRdf.org/Arthur_Dent> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/The%20Ultimate%20Hitchhikers%20Guide%20to%20the%20Galaxy> ;
@@ -39,7 +39,7 @@
     ns1:IsInBook <http://texteToRdf.org/Harry%20Potter%20and%20the%20Cursed%20Child>,
         <http://texteToRdf.org/Harry%20Potter%20and%20the%20Half-Blood%20Prince%20%28Harry%20Potter%20%20%236%29> ;
     ns1:educated_at <http://texteToRdf.org/Hogwarts> ;
-    ns1:father <http://texteToRdf.org/Albus> ;
+    ns1:fatherOf <http://texteToRdf.org/Albus> ;
     ns1:relative <http://texteToRdf.org/Hermione_Granger>,
         <http://texteToRdf.org/Ron_Weasley> .
 

@@ -45,6 +45,7 @@ myonto:Book a owl:Class;
 
 myonto:Magazine a owl:class;
 	rdfs:comment "a Magazine";	
+	owl:priorVersion myonto:Magazine;
 	owl:disjointWith myonto:Book .
 	
 myonto:ElementsImportant a owl:Class;
@@ -58,8 +59,14 @@ myonto:Author a owl:Class;
  
 myonto:AuthorAndProtagonist a owl:Class;
 	owl:equivalentClass [
+        rdf:type owl:Class ;
         owl:intersectionOf (myonto:Author myonto:ElementsImportant)
-    ].
+    ] ;
+    owl:equivalentClass [
+        rdf:type owl:Restriction ;
+        owl:onProperty myonto:MentionnedByAuthor ;
+        owl:hasSelf "true"^^xsd:boolean
+    ] .
 
 myonto:PrintType a owl:Class;
     # owl:equivalentClass dbo:PrintType;
@@ -203,7 +210,7 @@ myonto:subclass_of a owl:AsymmetricProperty;
 	rdfs:range myonto:ElementsImportant.
 	
 myonto:educated_at a owl:IrreflexiveProperty ;
-	rdfs:comment "where the personnage got educated"@en;
+	rdfs:comment "where the personOfnage got educated"@en;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 
@@ -220,23 +227,27 @@ myonto:parent a owl:AsymmetricProperty;
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:ElementsImportant.
 	
-myonto:father a owl:AsymmetricProperty;
+myonto:fatherOf a owl:AsymmetricProperty;
 	
 	owl:subClassOf myonto:relative;	
-	rdfs:comment "father of an elements"@en.
+	rdfs:comment "fatherOf of an elements"@en.
 
 myonto:Enfant a owl:AsymmetricProperty;
 	owl:inverseOf myonto:parent;
 	owl:subClassOf myonto:relative.
 	
-myonto:son a owl:AsymmetricProperty;
+myonto:sonOf a owl:AsymmetricProperty;
 	owl:subClassOf myonto:Enfant.
 
 myonto:spouse a owl:ObjectProperty;
 	owl:subClassOf myonto:relative;
 	rdfs:comment "spouse"@en;
 	rdfs:domain myonto:ElementsImportant;
-	rdfs:range myonto:ElementsImportant.	
+	rdfs:range myonto:Elements
+	
+	
+myonto:partner a owl:ObjectProperty;
+	owl:equivalentProperty myonto:spouse.
 	
 
 myonto:residence a owl:ObjectProperty;
