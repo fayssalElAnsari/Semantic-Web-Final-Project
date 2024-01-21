@@ -136,7 +136,7 @@ myonto:hasCategory a owl:ObjectProperty ;
     rdfs:label "Book Category"@en ;
     rdfs:comment "The category of a book"@en ;
     rdfs:domain myonto:Book ;
-    rdfs:range myonto:Category .
+    rdfs:range myonto:CategoryEnumeration .
 
 myonto:hasAuthor a owl:ObjectProperty ;
     rdfs:label "Book Author"@en ;
@@ -181,12 +181,7 @@ myonto:IsInBook a owl:ObjectProperty,
 #########################################
 #      Categories
 #########################################
-myonto:LiteraryCriticism a owl:Class ;
-    rdfs:subClassOf myonto:Category ;
-    rdfs:label "Literary Criticism"@en ;
-    rdfs:comment "A category representing the study, evaluation, and interpretation of literature."@en .
+# in a seperate file...
 
-myonto:Fiction a owl:Class ;
-    rdfs:subClassOf myonto:Category ;
-    rdfs:label "Fiction"@en ;
-    rdfs:comment "A category representing fictional works including novels, stories, and narrative literature."@en .
+myonto:CategoryEnumeration owl:Class;
+    owl:oneOf (myonto:AchillesGreekmythology myonto:Activityprogramsineducation myonto:Adventure myonto:Adventurestories myonto:AeneasLegendarycharacter myonto:Africa myonto:AfricanAmericanfamilies myonto:Agedwomen myonto:Agriculture myonto:Ahab,CaptainFictitiouscharacter myonto:Alcoholics myonto:Americandrama myonto:Americanessays myonto:Americanfiction myonto:Americans myonto:Animalsounds myonto:Animals myonto:Animatedfilms myonto:Anti-Americanism myonto:AntiquesAndCollectibles myonto:Arabicliterature myonto:Architecture myonto:Armageddon myonto:Art myonto:Artmuseumcurators myonto:Artificialintelligence myonto:Artists'models myonto:Asperger'ssyndrome myonto:Astrophysics myonto:AthensGreece myonto:Atomicbomb myonto:Aufsatzsammlung-Englisch-Massenmedien-Sprache myonto:Australia myonto:Authors,American myonto:Authors,Arab myonto:Authors,Chilean myonto:Autobiographicalfiction myonto:BUSINESSAndECONOMICS myonto:Bacchantes myonto:Ballet myonto:Bankrobberies myonto:Barmitzvah myonto:Baseballplayers myonto:Bereavement myonto:Bestsellers myonto:Bible myonto:Bibleandevolution myonto:Bildungsromans myonto:Biographicalfiction myonto:BiographyAndAutobiography myonto:Boardingschools myonto:Boatsandboating myonto:Body,MindAndSpirit myonto:Bond,JamesFictitiouscharacter myonto:BosniaandHercegovina myonto:BosniaandHerzegovina myonto:Brain myonto:British myonto:BusinessAndEconomics myonto:Businessplanning myonto:Capitalistsandfinanciers myonto:Cardsharping myonto:Children'spoetry,English myonto:Children'sstories myonto:Christianfiction myonto:Christianlife myonto:Christianpilgrimsandpilgrimages myonto:Christmasstories myonto:Churchworkwiththepoor myonto:Civilization myonto:Classicliterature myonto:CliffsNotes myonto:Cliffsnotes myonto:Colombia myonto:ComicsAndGraphicNovels myonto:Compulsiveeating myonto:Computers myonto:Conciousness myonto:Cookery,French myonto:Cooking myonto:Cooking,Italian myonto:Courtship myonto:CraftsAndHobbies myonto:DatingSocialcustoms myonto:Death myonto:Dent,ArthurFictitiouscharacter myonto:Depressions myonto:Derivativesecurities myonto:Detectiveandmysterystories myonto:Domesticfiction myonto:Drama myonto:Dramaingl�s myonto:Dramatists myonto:DuneImaginaryplace myonto:Education myonto:Educationaltestsandmeasurements myonto:Egypt myonto:England myonto:Englishfiction myonto:Fables,Latin myonto:FamilyAndRelationships myonto:Fiction myonto:Floods myonto:ForeignLanguageStudy myonto:France myonto:Freewillanddeterminism myonto:Frontierandpioneerlife myonto:GamesAndActivities myonto:Geishas myonto:GreekdramaTragedy myonto:Groupreading myonto:GuitarmusicRock myonto:HealthAndFitness myonto:Highinterest-lowvocabularybooks myonto:History myonto:Horrortales myonto:Humor myonto:Inheritanceandsuccession myonto:Jews myonto:JuvenileFiction myonto:JuvenileNonfiction myonto:Knightsandknighthood myonto:LanguageArtsAndDisciplines myonto:Latitude myonto:Law myonto:Leadership myonto:LiteraryCollections myonto:LiteraryCriticism myonto:Love myonto:Lovestories myonto:Massachusetts myonto:Medical myonto:Militaryartandscience myonto:Motionpictureplays myonto:Music myonto:Nature myonto:Netherlands myonto:Novelists,American myonto:Novelists,Canadian myonto:Novelists,English myonto:Peoplewithsocialdisabilities myonto:PerformingArts myonto:Pets myonto:Philosophy myonto:Photography myonto:Pigeons myonto:Poetry myonto:PoliticalScience myonto:PompeiiExtinctcity myonto:PrussiaGermany myonto:Psychology myonto:Reference myonto:Religion myonto:Russianliterature myonto:Sailing myonto:Science myonto:Self-Help myonto:Sex myonto:SocialScience myonto:Spanishlanguage myonto:SportsAndRecreation myonto:Storytelling myonto:TechnologyAndEngineering myonto:Texas myonto:Transportation myonto:Travel myonto:UnitedStates myonto:YoungAdultFiction).

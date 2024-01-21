@@ -607,6 +607,9 @@ myonto:Jews a owl:Class ;
     rdfs:comment "Category representing Jews."@en .
 
 myonto:JuvenileFiction a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (myonto:Juvenile myonto:Fiction)
+    ];
     rdfs:subClassOf myonto:Category ;
     rdfs:label "Juvenile Fiction"@en ;
     rdfs:comment "Category representing Juvenile Fiction."@en ;

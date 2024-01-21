@@ -29,15 +29,16 @@
         - [ ] owl:propertyChainAxiom
         - [x] owl:FunctionalProperty
         - [ ] owl:InverseFunctionalProperty
-        - [ ] owl:oneOf
+        - [x] owl:oneOf
         - [ ] owl:unionOf
-        - [ ] owl:intersectionOf
+        - [x] owl:intersectionOf
         - [ ] owl:complementOf
         - [x] owl:disjointWith
         - [x] owl:AllDisjointClasses
         - [ ] owl:disjointUnionOf
         - [x] owl:equivalentClass
         - [ ] owl:equivalentProperty
+        INDIVIDUALS:
         - [ ] owl:sameAs
         - [ ] owl:differentFrom
         - [x] owl:hasKey
