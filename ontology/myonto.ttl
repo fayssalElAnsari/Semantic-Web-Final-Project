@@ -170,6 +170,60 @@ myonto:IsInBook a owl:ObjectProperty,
 	rdfs:domain myonto:ElementsImportant;
 	rdfs:range myonto:Book.
 	
+myonto:author a owl:ObjectProperty ;
+	owl:sameAs myonto:hasAuthor.
+
+myonto:present_in_work a owl:ObjectProperty;
+	owl:sameAs myonto:IsInBook.
+
+myonto:has_part a owl:ObjectProperty;
+	rdfs:label "Book part"@en ;
+	rdfs:comment "Part of a Book";
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:Book.
+
+myonto:subclass_of a owl:ObjectProperty;
+	rdfs:comment "subclass of another element"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.
+	
+myonto:educated_at a owl:ObjectProperty;
+	rdfs:comment "where the personnage got educated"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.
+
+myonto:relative a owl:ObjectProperty;
+	owl:SymmetricProperty;
+	rdfs:comment "relative of an element"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.
+
+myonto:father a owl:ObjectProperty;
+	owl:subClassOf myonto:relative;
+	owl:inverseOf myonto:son;
+	rdfs:comment "father of an elements"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.
+	
+myonto:son a owl:ObjectProperty;
+	owl:subClassOf myonto:relative.
+
+myonto:spouse a owl:ObjectProperty;
+	owl:subClassOf myonto:relative;
+	rdfs:comment "spouse"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.	
+	
+
+myonto:residence a owl:ObjectProperty;
+	
+	rdfs:comment "location place of an element"@en;
+	rdfs:domain myonto:ElementsImportant;
+	rdfs:range myonto:ElementsImportant.
+	
+myonto:notable_work a owl:ObjectProperty;
+	owl:subClassOf myonto:hasBook;
+	rdfs:comment "the notable work of an author"@en.
 
 #########################################
 #       Disjointness

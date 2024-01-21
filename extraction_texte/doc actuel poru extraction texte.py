@@ -177,7 +177,7 @@ def generate_rdf(graph, livre_value="X"):
         sanitized_subject = subject.replace(" ", "_")
         sanitized_attribut = attribut.replace(" ", "_")
         sanitized_predicate = predicate["label"].replace(" ", "_")
-        rdf_graph.add((base_ns[sanitized_subject], URIRef("schema:" + sanitized_predicate), base_ns[sanitized_attribut]))
+        rdf_graph.add((base_ns[sanitized_subject], schema[sanitized_predicate], base_ns[sanitized_attribut]))
 
     return rdf_graph
 

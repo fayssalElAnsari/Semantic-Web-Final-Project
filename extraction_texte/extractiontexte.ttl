@@ -1,26 +1,25 @@
 @prefix ns1: <http://myonto.org/myonto_schema/> .
-@prefix ns2: <schema:> .
 
 <http://texteToRdf.org/Arthur_Dent> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/The%20Ultimate%20Hitchhikers%20Guide%20to%20the%20Galaxy> ;
-    ns2:present_in_work <http://texteToRdf.org/The_Hitchhiker’s_Guide_to_the_Galaxy> .
+    ns1:present_in_work <http://texteToRdf.org/The_Hitchhiker’s_Guide_to_the_Galaxy> .
 
 <http://texteToRdf.org/Entre_récit_de_voyage,_peinture_de_société_et_expériences_loufoques> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/Notes%20from%20a%20Small%20Island> ;
-    ns2:author <http://texteToRdf.org/Bill_Bryson> .
+    ns1:author <http://texteToRdf.org/Bill_Bryson> .
 
 <http://texteToRdf.org/The_Lost_Continent> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/Neither%20Here%20nor%20There%20A%20Travels%20in%20Europe> ;
-    ns2:author <http://texteToRdf.org/Bill_Bryson> .
+    ns1:author <http://texteToRdf.org/Bill_Bryson> .
 
 <http://texteToRdf.org/War_of_the_Ring> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/The%20Lord%20of%20the%20Rings%20A%20Weapons%20and%20Warfare> ;
-    ns2:author <http://texteToRdf.org/J._R._R._Tolkien> ;
-    ns2:has_part <http://texteToRdf.org/Lord_of_the_Rings> .
+    ns1:author <http://texteToRdf.org/J._R._R._Tolkien> ;
+    ns1:has_part <http://texteToRdf.org/Lord_of_the_Rings> .
 
 <http://texteToRdf.org/hex> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/The%20Changeling%20Sea> ;
-    ns2:subclass_of <http://texteToRdf.org/magic> .
+    ns1:subclass_of <http://texteToRdf.org/magic> .
 
 <http://texteToRdf.org/A_Walk_in_the_Woods> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/In%20a%20Sunburned%20Country> .
@@ -39,9 +38,9 @@
 <http://texteToRdf.org/Harry_Potter> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/Harry%20Potter%20and%20the%20Cursed%20Child>,
         <http://texteToRdf.org/Harry%20Potter%20and%20the%20Half-Blood%20Prince%20%28Harry%20Potter%20%20%236%29> ;
-    ns2:educated_at <http://texteToRdf.org/Hogwarts> ;
-    ns2:father <http://texteToRdf.org/Albus> ;
-    ns2:relative <http://texteToRdf.org/Hermione_Granger>,
+    ns1:educated_at <http://texteToRdf.org/Hogwarts> ;
+    ns1:father <http://texteToRdf.org/Albus> ;
+    ns1:relative <http://texteToRdf.org/Hermione_Granger>,
         <http://texteToRdf.org/Ron_Weasley> .
 
 <http://texteToRdf.org/Hogwarts> a ns1:ElementsImportant ;
@@ -53,7 +52,7 @@
 
 <http://texteToRdf.org/J._R._R._Tolkien> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/The%20Lord%20of%20the%20Rings%20A%20Weapons%20and%20Warfare> ;
-    ns2:author <http://texteToRdf.org/Lord_of_the_Rings> .
+    ns1:author <http://texteToRdf.org/Lord_of_the_Rings> .
 
 <http://texteToRdf.org/Kenya> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/Bill%20Brysons%20African%20Diary> .
@@ -68,7 +67,7 @@
 
 <http://texteToRdf.org/Ron_Weasley> a ns1:ElementsImportant ;
     ns1:IsInBook <http://texteToRdf.org/Harry%20Potter%20and%20the%20Cursed%20Child> ;
-    ns2:spouse <http://texteToRdf.org/Hermione_Granger> .
+    ns1:spouse <http://texteToRdf.org/Hermione_Granger> .
 
 <http://texteToRdf.org/The%20Changeling%20Sea> a ns1:Book ;
     ns1:Content <http://texteToRdf.org/hex>,
@@ -106,6 +105,6 @@
         <http://texteToRdf.org/In%20a%20Sunburned%20Country>,
         <http://texteToRdf.org/Neither%20Here%20nor%20There%20A%20Travels%20in%20Europe>,
         <http://texteToRdf.org/Notes%20from%20a%20Small%20Island> ;
-    ns2:notable_work <http://texteToRdf.org/A_Walk_in_the_Woods> ;
-    ns2:residence <http://texteToRdf.org/Kenya> .
+    ns1:notable_work <http://texteToRdf.org/A_Walk_in_the_Woods> ;
+    ns1:residence <http://texteToRdf.org/Kenya> .
 
