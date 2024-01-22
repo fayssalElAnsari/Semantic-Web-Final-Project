@@ -4,7 +4,7 @@ PREFIX ns1: <http://myonto.org/myonto_schema#>
 
 SELECT ?book ?element
 WHERE {
-  <http://texteToRdf.org/Bill_Bryson> (ns1:IsInBook|ns1:Content)* ?book .
+  <http://myonto.org/Bill_Bryson> (ns1:IsInBook|ns1:Content)* ?book .
   ?book a ns1:Book ;
         ns1:Content ?element .
   ?element a ns1:ElementsImportant .

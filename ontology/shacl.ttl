@@ -38,11 +38,8 @@ myonto:BookShape a sh:NodeShape ;
         sh:path myonto:publishedDate ;
         sh:datatype xsd:date
     ] ;
-	sh:oneOrMorePath myonto:author ;  # Ensuring at least one author for a book
-    sh:property [
-        sh:path myonto:datePublished ;
-        sh:datatype xsd:string
-    ].
+	sh:oneOrMorePath myonto:author .  # Ensuring at least one author for a book
+    
 
 
 
