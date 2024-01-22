@@ -10,7 +10,7 @@
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
 
-@prefix myonto: <http://myonto.org/myonto_schema#> .
+@prefix myonto: <http://myonto.org/myonto_schema/> .
 
 #########################################
 #       CLASSES
@@ -61,11 +61,6 @@ myonto:AuthorAndProtagonist a owl:Class;
 	owl:equivalentClass [
         rdf:type owl:Class ;
         owl:intersectionOf (myonto:Author myonto:ElementsImportant)
-    ] ;
-    owl:equivalentClass [
-        rdf:type owl:Restriction ;
-        owl:onProperty myonto:MentionnedByAuthor ;
-        owl:hasSelf "true"^^xsd:boolean
     ] .
 
 myonto:PrintType a owl:Class;

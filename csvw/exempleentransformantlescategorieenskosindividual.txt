@@ -610,6 +610,7 @@ skoslocal:JuvenileFiction a myonto:Category ;
     
     skos:prefLabel "Juvenile Fiction"@en ;
     skos:note "Category representing Juvenile Fiction."@en ;
+	skos:broader skoslocal:Fiction.
     
 
 skoslocal:JuvenileNonfiction a myonto:Category ;

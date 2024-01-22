@@ -152,7 +152,7 @@ def generate_rdf(graph, livre_value="X"):
     rdf_graph = Graph()
 
     # Définir une base de l'espace de noms pour vos entités
-    base_ns = Namespace("http://texteToRdf.org/")
+    base_ns = Namespace("http://myonto.org/")
     schema = Namespace("http://myonto.org/myonto_schema/")
     rdf=Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 
