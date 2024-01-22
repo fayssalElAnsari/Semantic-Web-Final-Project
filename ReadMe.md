@@ -63,17 +63,17 @@
             - [x] sh:minCount
             - [x] sh:maxCount
         - [ ] sh:targetSubjectsOf
-        - [ ] sh:targetObjectsOf
-        - [ ] sh:oneOrMorePath
-        - [ ] sh:alternativePath
-        - [ ] sh:nodeKind
+        - [x] sh:targetObjectsOf
+        - [x] sh:oneOrMorePath
+        - [x] sh:alternativePath
+        - [x] sh:nodeKind
         - [ ] ...
 
 
 
 - [ ] enrichir l'ontology a l'aide des regles d'inference SPARQL. (Est ce qu'on peut utiliser protege pour faire ca automatiquement?)
-- [ ] ajouter des contraintes SHACL pour valider les donnees 
-- [x] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (rebel)
+- [x] ajouter des contraintes SHACL pour valider les donnees 
+- [x] utiliser les techniques d'extraction d'information pour consruire un graph de connaisance (ici extraction triplé)
 - [x] enrichir le graphe de connaissance (csv2rdf)
 - [x] relier les donnees locales avec les donnees externes 
     - [x] map isbn
