@@ -148,17 +148,25 @@ graphe9=fullpipelinetograph(q9)
 
 
 
-def generate_rdf(graph, livre_value="X"):
+def generate_rdf(graph, livre_value):
     rdf_graph = Graph()
 
     # Définir une base de l'espace de noms pour vos entités
     base_ns = Namespace("http://myonto.org/")
     schema = Namespace("http://myonto.org/myonto_schema/")
     rdf=Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
-
+    owl=Namespace("http://www.w3.org/2002/07/owl#")
+    rdfs=Namespace("http://www.w3.org/2000/01/rdf-schema#")
     # Ajouter un objet "livre" avec des relations "contient" avec toutes les nodes du graph
     livre_uri = base_ns[livre_value]
     rdf_graph.add((livre_uri, rdf["type"], schema["Book"]))
+
+    important_element = URIRef("http://myonto.org/myonto_schema/ElementsImportant")
+    rdf_graph.add((important_element, rdf.type, owl["Class"]))
+
+    # Ajouter les étiquettes et commentaires
+    rdf_graph.add((important_element, rdfs["label"], Literal("ImportantElement", lang="en")))
+    rdf_graph.add((important_element, rdfs["comment"], Literal("A relevant element of a book")))
     
     for node in graph.nodes:
         # Remplacez les espaces par des underscores dans les valeurs des nœuds
@@ -178,6 +186,7 @@ def generate_rdf(graph, livre_value="X"):
         sanitized_attribut = attribut.replace(" ", "_")
         sanitized_predicate = predicate["label"].replace(" ", "_")
         rdf_graph.add((base_ns[sanitized_subject], schema[sanitized_predicate], base_ns[sanitized_attribut]))
+        rdf_graph.add((schema[sanitized_predicate], rdf.type, owl["ObjectProperty"]))
 
     return rdf_graph
 
