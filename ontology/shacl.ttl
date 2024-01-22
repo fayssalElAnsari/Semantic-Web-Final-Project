@@ -4,6 +4,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
@@ -17,6 +18,10 @@
 #########################################
 myonto:BookShape a sh:NodeShape ;
     sh:targetClass myonto:Book ;
+    sh:alternativePath (
+        myonto:hasIsbn10
+        myonto:hasIsbn13
+    ) ;
     sh:property [
         sh:path myonto:hasIsbn10 ;
         sh:datatype xsd:string ;
@@ -33,7 +38,18 @@ myonto:BookShape a sh:NodeShape ;
         sh:path myonto:publishedDate ;
         sh:datatype xsd:date
     ] ;
+	sh:oneOrMorePath myonto:author ;  # Ensuring at least one author for a book
     sh:property [
         sh:path myonto:datePublished ;
-        sh:datatype xsd:date
+        sh:datatype xsd:string
     ].
+
+
+
+myonto:ObjectValidationShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf myonto:hasIsbn13 ;  # Targeting the objects of triples with myonto:hasIsbn13 property
+	sh:nodeKind sh:Literal .  # Validating that the property has literal values
+	
+
+
