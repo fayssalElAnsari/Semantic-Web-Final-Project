@@ -13,6 +13,8 @@ CONSTRUCT {
         myonto:hasIsbn13 ?isbn13;
         myonto:hasCategory ?categoryUri;
         myonto:googleBookLink ?googleBookLink;
+        myonto:imageLink ?thumbnail;
+        myonto:description ?description;
         myonto:hasAuthor ?author.
 
     ?authorUri a myonto:Author;
@@ -20,13 +22,14 @@ CONSTRUCT {
 } WHERE {
     ?book api:volumeInfo [api:title ?title];
         api:volumeInfo [api:authors ?author];
-        #api:volumeInfo [api:description ?description];
+        api:volumeInfo [api:description ?description];
         api:volumeInfo [api:industryIdentifiers [api:identifier ?isbn; api:type ?isbnType]];
         api:volumeInfo [api:printType ?printType];
         api:volumeInfo [api:categories ?apiCategories];
         api:volumeInfo [api:publishedDate ?publishedDate];
         api:volumeInfo [api:language ?language];
         api:volumeInfo [api:infoLink ?googleBookLink];
+        api:volumeInfo [api:imageLinks [api:smallThumbnail ?smallThumbnail; api:thumbnail ?thumbnail]];
         api:id ?id;
         api:volumeInfo [api:publisher ?publisher].
 
