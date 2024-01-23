@@ -1,3 +1,5 @@
+RAPPORT: https://docs.google.com/document/d/1fOK-MxleOq5ySh-eHAis2xz_QCtLyVAY8y6obztuX0I/edit#heading=h.hq7g807sp2sm
+
 ## TODO
 
 - [x] chosir un domaine (la literrature par exemple, Le choix de l'ontologie doit se baser sur la possibilite de demontrer les fonctionalites owl et skos, la quantite des donnees sur internet sur le domaine choisis. Et si c'est gratuit)
